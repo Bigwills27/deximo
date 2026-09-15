@@ -1,0 +1,35 @@
+# Reference and generated design assets
+_refs/
+dist/
+build/
+out/
+coverage/
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and runtime files
+*.log
+logs/
+.cache/
+.tmp/
+tmp/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
