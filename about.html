@@ -1,0 +1,2956 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="About Voxpor – Modern Business & Finance Startup HTML Template. Empowering businesses and individuals with smarter financial tools.">
+    <title>About Us — Voxpor Business & Finance Startup</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        document.documentElement.classList.add('js');
+        document.documentElement.dataset.theme = localStorage.getItem('voxpor-theme') || 'dark';
+    </script>
+
+    <style>
+        /* =========================================================
+       VOXPOR ABOUT PAGE DESIGN SYSTEM & STYLES
+       ========================================================= */
+        :root {
+            --bg-dark: #080b13;
+            --bg-surface: #0e1424;
+            --bg-card: rgba(18, 26, 46, 0.7);
+            --bg-card-hover: rgba(26, 38, 68, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-accent: rgba(83, 109, 254, 0.35);
+
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-faint: #64748b;
+
+            --accent-primary: #536dfe;
+            --accent-gradient: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+            --accent-glow: rgba(83, 109, 254, 0.25);
+            --accent-cyan: #00f2fe;
+
+            --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+
+            --max-width: 1200px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        :root[data-theme="light"] {
+            --bg-dark: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --border-color: #e2e8f0;
+            --border-accent: rgba(83, 109, 254, 0.4);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-faint: #94a3b8;
+            --accent-glow: rgba(83, 109, 254, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 48px));
+            margin-inline: auto;
+        }
+
+        /* =========================================================
+       HEADER & NAVIGATION (VOXPOR STYLE)
+       ========================================================= */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 11, 19, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            height: 84px;
+            display: flex;
+            align-items: center;
+        }
+
+        :root[data-theme="light"] .site-header {
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            width: min(var(--max-width), calc(100% - 48px));
+            margin-inline: auto;
+        }
+
+        /* Logo */
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+
+        .brand-logo .logo-v {
+            font-size: 30px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            display: inline-block;
+            transform: skew(-8deg);
+        }
+
+        .brand-logo .logo-text {
+            letter-spacing: 1.5px;
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* Nav links */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-muted);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        .nav-link.active {
+            color: var(--accent-primary);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 10px 0;
+            min-width: 180px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 10;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 8px 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(83, 109, 254, 0.1);
+            color: var(--accent-primary);
+        }
+
+        /* Search bar & Nav actions */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            padding: 8px 16px;
+            color: var(--text-muted);
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .search-bar:focus-within {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 13.5px;
+            width: 100px;
+            transition: width 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            width: 140px;
+        }
+
+        .search-bar input::placeholder {
+            color: var(--text-faint);
+        }
+
+        .search-bar svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+        }
+
+        /* App Button */
+        .btn-app {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .btn-app:hover {
+            background: var(--text-main);
+            color: var(--bg-dark);
+            border-color: var(--text-main);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        :root[data-theme="light"] .btn-app {
+            border-color: #0f172a;
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--text-main);
+            border-color: var(--accent-primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+       HERO SECTION (ABOUT US BANNER)
+       ========================================================= */
+        .hero-banner {
+            position: relative;
+            padding: 90px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 30%, rgba(83, 109, 254, 0.15), transparent 70%), var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        :root[data-theme="light"] .hero-title {
+            color: #0f172a;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a:hover {
+            color: #ffffff;
+        }
+
+        :root[data-theme="light"] .breadcrumb a:hover {
+            color: #0f172a;
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-faint);
+            font-size: 13px;
+        }
+
+        .breadcrumb-current {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        /* =========================================================
+       "THIS IS THE REASON WHY YOU SHOULD USE VOXPOR" SECTION
+       ========================================================= */
+        .section-pad {
+            padding: 110px 0;
+        }
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .reason-visual {
+            position: relative;
+        }
+
+        .reason-img-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
+        }
+
+        .reason-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reason-visual:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Floating highlight badge */
+        .floating-card-badge {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-accent);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            animation: badgeFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes badgeFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .floating-badge-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-gradient);
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .floating-badge-text strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .floating-badge-text span {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Reason Copy */
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-primary);
+            margin-bottom: 16px;
+        }
+
+        .badge-tag::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            box-shadow: 0 0 10px var(--accent-primary);
+        }
+
+        .reason-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.2px;
+            color: var(--text-main);
+            margin-bottom: 24px;
+        }
+
+        .reason-heading .highlight-voxpor {
+            color: var(--accent-primary);
+            background: linear-gradient(135deg, #536dfe 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .reason-desc {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .feature-check-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .feature-check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(83, 109, 254, 0.15);
+            border: 1px solid var(--accent-primary);
+            display: grid;
+            place-items: center;
+            color: var(--accent-primary);
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-content strong {
+            display: block;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .check-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Small Stats row inside copy */
+        .mini-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mini-stat-item h4 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .mini-stat-item p {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* =========================================================
+       4 STEPS TO FINANCIAL SUCCESS SECTION
+       ========================================================= */
+        .steps-section {
+            background: radial-gradient(circle at 50% 10%, rgba(83, 109, 254, 0.08), transparent 60%), #070a13;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        :root[data-theme="light"] .steps-section {
+            background: #f1f5f9;
+        }
+
+        .steps-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 60px;
+        }
+
+        .steps-title {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4.5vw, 48px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1.2px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        :root[data-theme="light"] .steps-title {
+            color: #0f172a;
+        }
+
+        .steps-title .highlight-financial {
+            color: #536dfe;
+            background: linear-gradient(135deg, #4f75f8 0%, #7d93fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .steps-subtitle {
+            font-size: 15.5px;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin: 0 auto;
+            max-width: 680px;
+        }
+
+        :root[data-theme="light"] .steps-subtitle {
+            color: #64748b;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .step-card {
+            background: #02050c;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 310px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        :root[data-theme="light"] .step-card {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .step-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(83, 109, 254, 0.4);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55), 0 0 25px rgba(83, 109, 254, 0.15);
+        }
+
+        :root[data-theme="light"] .step-card:hover {
+            box-shadow: 0 20px 40px rgba(83, 109, 254, 0.12);
+            border-color: var(--accent-primary);
+        }
+
+        .step-card:hover::after {
+            opacity: 1;
+        }
+
+        .step-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .step-card-title {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.35;
+            letter-spacing: -0.4px;
+        }
+
+        :root[data-theme="light"] .step-card-title {
+            color: #0f172a;
+        }
+
+        .step-card-desc {
+            font-size: 14.5px;
+            color: #8e9cb0;
+            line-height: 1.65;
+        }
+
+        :root[data-theme="light"] .step-card-desc {
+            color: #64748b;
+        }
+
+        .step-card-num {
+            font-family: var(--font-heading);
+            font-size: 38px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+            letter-spacing: -1px;
+            margin-top: 36px;
+            display: block;
+        }
+
+        :root[data-theme="light"] .step-card-num {
+            color: #0f172a;
+        }
+
+        /* =========================================================
+       TRACK YOUR DAILY EXPENSES SECTION
+       ========================================================= */
+        .track-section {
+            background: var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .track-copy {
+            max-width: 540px;
+        }
+
+        .track-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 4.5vw, 54px);
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -1.5px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        .track-heading .highlight-expenses {
+            color: #536dfe;
+            background: linear-gradient(135deg, #4f75f8 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .track-lead {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .track-features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .track-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .track-feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #0f172a;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .track-feature-item:hover .track-feature-icon {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow: 0 12px 25px var(--accent-glow);
+        }
+
+        .track-feature-text h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .track-feature-text p {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Right visual composition */
+        .track-visual-container {
+            position: relative;
+            height: 580px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .track-visual-backdrop {
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #254edb 0%, #3b82f6 60%, #6366f1 100%);
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.95;
+            box-shadow: 0 20px 60px rgba(37, 78, 219, 0.35);
+        }
+
+        .track-cutout-card {
+            position: absolute;
+            left: 0;
+            top: 22%;
+            z-index: 3;
+            width: 215px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: floatCutout 5s ease-in-out infinite alternate;
+        }
+
+        .track-cutout-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .track-phone-mockup {
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            z-index: 2;
+            width: 290px;
+            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.65));
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: floatPhone 6s ease-in-out infinite alternate;
+        }
+
+        .track-phone-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes floatCutout {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-12px) rotate(-1deg);
+            }
+        }
+
+        @keyframes floatPhone {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* =========================================================
+       TEAM SHOWCASE SECTION ("MEET THE AMAZING TEAM")
+       ========================================================= */
+        .team-showcase-section {
+            background: #060913;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        :root[data-theme="light"] .team-showcase-section {
+            background: #f8fafc;
+        }
+
+        .team-showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.05fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        /* Team Member Card */
+        .team-showcase-card {
+            background: #02050b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        :root[data-theme="light"] .team-showcase-card {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .team-showcase-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(83, 109, 254, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65), 0 0 20px rgba(83, 109, 254, 0.15);
+        }
+
+        :root[data-theme="light"] .team-showcase-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(83, 109, 254, 0.12);
+        }
+
+        .team-card-image {
+            width: 100%;
+            aspect-ratio: 1 / 1.05;
+            overflow: hidden;
+            background: #0e1424;
+        }
+
+        .team-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .team-showcase-card:hover .team-card-image img {
+            transform: scale(1.05);
+        }
+
+        .team-card-footer {
+            background: #02050b;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        :root[data-theme="light"] .team-card-footer {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .team-card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .team-card-name {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+        }
+
+        :root[data-theme="light"] .team-card-name {
+            color: #0f172a;
+        }
+
+        .team-card-role {
+            font-size: 14px;
+            color: #8e9cb0;
+            font-weight: 500;
+        }
+
+        :root[data-theme="light"] .team-card-role {
+            color: #64748b;
+        }
+
+        .team-card-socials {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .team-social-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #050811;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .team-social-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .team-social-btn:hover {
+            background: var(--accent-primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        /* Right column: Heading & Intro */
+        .team-showcase-content {
+            padding-left: 20px;
+        }
+
+        .team-showcase-title {
+            font-family: var(--font-heading);
+            font-size: clamp(38px, 4.2vw, 52px);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+
+        :root[data-theme="light"] .team-showcase-title {
+            color: #0f172a;
+        }
+
+        .team-showcase-title .highlight-team {
+            color: #536dfe;
+            background: linear-gradient(135deg, #4f75f8 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .team-showcase-desc {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.75;
+            margin-bottom: 38px;
+            max-width: 400px;
+        }
+
+        :root[data-theme="light"] .team-showcase-desc {
+            color: #64748b;
+        }
+
+        .btn-team-readmore {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 38px;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            border-radius: var(--radius-full);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .btn-team-readmore:hover {
+            background: #ffffff;
+            color: #080b13;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        :root[data-theme="light"] .btn-team-readmore {
+            border-color: #0f172a;
+            color: #0f172a;
+        }
+
+        :root[data-theme="light"] .btn-team-readmore:hover {
+            background: #0f172a;
+            color: #ffffff;
+        }
+
+        /* =========================================================
+       NUMBERS & MILESTONES BANNER
+       ========================================================= */
+        .milestones-band {
+            padding: 70px 0;
+            background: linear-gradient(135deg, rgba(83, 109, 254, 0.15) 0%, rgba(142, 68, 173, 0.1) 100%), var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .milestone-item h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        :root[data-theme="light"] .milestone-item h3 {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .milestone-item p {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* =========================================================
+       FREQUENTLY ASKED QUESTIONS SECTION
+       ========================================================= */
+        .faq-section {
+            background: #060913;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        :root[data-theme="light"] .faq-section {
+            background: #f8fafc;
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 56px;
+        }
+
+        .faq-title {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4.2vw, 48px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1.2px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        :root[data-theme="light"] .faq-title {
+            color: #0f172a;
+        }
+
+        .faq-subtitle {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        :root[data-theme="light"] .faq-subtitle {
+            color: #64748b;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.85fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        /* Accordion */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .faq-item {
+            background: #02050b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        :root[data-theme="light"] .faq-item {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        .faq-item.active {
+            border-color: rgba(83, 109, 254, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        :root[data-theme="light"] .faq-item.active {
+            border-color: var(--accent-primary);
+            box-shadow: 0 10px 25px rgba(83, 109, 254, 0.1);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            padding: 24px 28px;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            transition: color 0.2s ease;
+        }
+
+        :root[data-theme="light"] .faq-question-btn {
+            color: #0f172a;
+        }
+
+        .faq-question-btn:hover {
+            color: var(--accent-primary);
+        }
+
+        .faq-toggle-icon {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            width: 28px;
+            height: 28px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, color 0.2s ease;
+        }
+
+        :root[data-theme="light"] .faq-toggle-icon {
+            color: #0f172a;
+        }
+
+        .faq-item.active .faq-toggle-icon {
+            color: var(--accent-primary);
+        }
+
+        .faq-answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+            padding: 0 28px;
+        }
+
+        .faq-item.active .faq-answer-content {
+            max-height: 250px;
+            padding: 0 28px 24px;
+        }
+
+        .faq-answer-content p {
+            font-size: 15px;
+            color: #8e9cb0;
+            line-height: 1.7;
+        }
+
+        :root[data-theme="light"] .faq-answer-content p {
+            color: #64748b;
+        }
+
+        /* Right Support Box */
+        .faq-support-panel {
+            background: #02050b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 44px 32px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        :root[data-theme="light"] .faq-support-panel {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-support-panel h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        :root[data-theme="light"] .faq-support-panel h3 {
+            color: #0f172a;
+        }
+
+        .faq-support-panel p {
+            font-size: 14.5px;
+            color: #8e9cb0;
+            margin-bottom: 32px;
+        }
+
+        :root[data-theme="light"] .faq-support-panel p {
+            color: #64748b;
+        }
+
+        .faq-contact-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .faq-contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(83, 109, 254, 0.2);
+        }
+
+        .contact-channels-icon {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            width: 72px;
+            height: 72px;
+        }
+
+        .channel-box {
+            border: 1.5px solid #254edb;
+            border-radius: 8px;
+            background: rgba(37, 78, 219, 0.06);
+            display: grid;
+            place-items: center;
+            color: #254edb;
+        }
+
+        .channel-box svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+        }
+
+        .faq-contact-card strong {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        font-size: 13px;
+        color: var(--text-muted);
+        }
+
+        /* =========================================================
+       DOWNLOAD APP SECTION ("DOWNLOAD LATEST VERSION OF THE APP")
+       ========================================================= */
+        .app-download-section {
+            background: var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .app-download-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .app-download-copy {
+            max-width: 540px;
+        }
+
+        .app-download-title {
+            font-family: var(--font-heading);
+            font-size: clamp(38px, 4.8vw, 56px);
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+
+        .app-download-title .highlight-app {
+            color: #536dfe;
+            background: linear-gradient(135deg, #4f75f8 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .app-download-desc {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 480px;
+        }
+
+        .app-download-buttons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .store-badge-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 12px;
+            padding: 12px 24px;
+            color: var(--text-main);
+            transition: var(--transition);
+            min-width: 175px;
+        }
+
+        .store-badge-btn:hover {
+            background: var(--text-main);
+            color: var(--bg-dark);
+            border-color: var(--text-main);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .store-badge-btn:hover .store-badge-icon {
+            filter: invert(1);
+        }
+
+        :root[data-theme="light"] .store-badge-btn {
+            background: #ffffff;
+            border-color: #cbd5e1;
+            color: #0f172a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        :root[data-theme="light"] .store-badge-btn:hover {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+        }
+
+        :root[data-theme="light"] .store-badge-btn:hover .store-badge-icon {
+            filter: invert(0) brightness(100);
+        }
+
+        .store-badge-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: filter 0.2s ease;
+        }
+
+        .store-badge-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.15;
+        }
+
+        .store-badge-text small {
+            font-size: 10px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            letter-spacing: 0.8px;
+            font-weight: 600;
+        }
+
+        .store-badge-text strong {
+            font-size: 15.5px;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* Right Visual */
+        .app-visual-wrapper {
+            position: relative;
+            height: 580px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-visual-backdrop {
+            position: absolute;
+            width: 490px;
+            height: 490px;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #6366f1 100%);
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.92;
+            box-shadow: 0 25px 70px rgba(37, 78, 219, 0.4);
+        }
+
+        .app-phones-img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 440px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.65));
+            animation: floatPhones 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatPhones {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-16px);
+            }
+        }
+
+        /* =========================================================
+       FOOTER (VOXPOR DESIGN)
+       ========================================================= */
+        .site-footer {
+            background: #040711;
+            border-top: 1px solid var(--border-color);
+            padding: 85px 0 40px;
+            color: var(--text-muted);
+        }
+
+        :root[data-theme="light"] .site-footer {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-top-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1.2fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 70px;
+        }
+
+        .footer-col-brand .footer-desc {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #94a3b8;
+            margin-top: 20px;
+            max-width: 360px;
+        }
+
+        :root[data-theme="light"] .footer-col-brand .footer-desc {
+            color: #64748b;
+        }
+
+        .footer-heading {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        :root[data-theme="light"] .footer-heading {
+            color: #0f172a;
+        }
+
+        /* Newsletter Column */
+        .footer-newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 380px;
+        }
+
+        .footer-newsletter-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-family: inherit;
+            font-size: 15px;
+            color: #ffffff;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .footer-newsletter-input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        :root[data-theme="light"] .footer-newsletter-input {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #0f172a;
+        }
+
+        .footer-newsletter-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4475e8 0%, #3557cf 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .footer-newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(53, 87, 207, 0.4);
+        }
+
+        /* Contact Column */
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #040711;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-contact-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-contact-info strong {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        :root[data-theme="light"] .footer-contact-info strong {
+            color: #0f172a;
+        }
+
+        .footer-contact-info a {
+            font-size: 14.5px;
+            color: #8e9cb0;
+            transition: color 0.2s ease;
+        }
+
+        .footer-contact-info a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 36px;
+            text-align: center;
+            font-size: 14.5px;
+            color: #8e9cb0;
+        }
+
+        :root[data-theme="light"] .footer-bottom {
+            border-top-color: #e2e8f0;
+            color: #64748b;
+        }
+
+        font-size: 13.5px;
+        color: var(--text-faint);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 14px;
+        }
+
+        .footer-social-link {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: grid;
+            place-items: center;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .footer-social-link:hover {
+            color: #ffffff;
+            background: var(--accent-primary);
+        }
+
+        /* =========================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================= */
+        @media (max-width: 992px) {
+
+            .nav-menu,
+            .search-bar {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .reason-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .floating-card-badge {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .app-download-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .app-download-copy {
+                max-width: 100%;
+            }
+
+            .app-download-desc {
+                margin-inline: auto;
+            }
+
+            .app-download-buttons {
+                justify-content: center;
+            }
+
+            .app-visual-wrapper {
+                height: 500px;
+                max-width: 440px;
+                margin-inline: auto;
+            }
+
+            .app-visual-backdrop {
+                width: 380px;
+                height: 380px;
+            }
+
+            .footer-top-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .track-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .track-copy {
+                max-width: 100%;
+            }
+
+            .track-visual-container {
+                height: 500px;
+                max-width: 480px;
+                margin-inline: auto;
+            }
+
+            .track-visual-backdrop {
+                width: 380px;
+                height: 380px;
+                right: 20px;
+            }
+
+            .track-cutout-card {
+                width: 180px;
+                left: 10px;
+            }
+
+            .track-phone-mockup {
+                width: 250px;
+                right: 30px;
+            }
+
+            .team-showcase-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+
+            .team-showcase-content {
+                grid-column: 1 / -1;
+                order: -1;
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .team-showcase-desc {
+                margin-inline: auto;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: calc(100% - 32px);
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .mini-stats-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-card {
+                min-height: auto;
+                padding: 32px 24px;
+            }
+
+            .track-visual-container {
+                height: 420px;
+                max-width: 100%;
+            }
+
+            .track-visual-backdrop {
+                width: 290px;
+                height: 290px;
+                right: 0;
+            }
+
+            .track-cutout-card {
+                width: 140px;
+                left: 0;
+                top: 18%;
+            }
+
+            .track-phone-mockup {
+                width: 200px;
+                right: 10px;
+            }
+
+            .track-heading {
+                font-size: 34px;
+            }
+
+            .team-showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .team-card-footer {
+                padding: 18px 20px;
+            }
+
+            .faq-question-btn {
+                padding: 20px 20px;
+                font-size: 16px;
+            }
+
+            .faq-answer-content {
+                padding: 0 20px;
+            }
+
+            .faq-item.active .faq-answer-content {
+                padding: 0 20px 20px;
+            }
+
+            .faq-support-panel {
+                padding: 36px 20px;
+            }
+
+            .app-visual-wrapper {
+                height: 400px;
+            }
+
+            .app-visual-backdrop {
+                width: 290px;
+                height: 290px;
+            }
+
+            .app-phones-img {
+                max-width: 320px;
+            }
+
+            .app-download-title {
+                font-size: 34px;
+            }
+
+            .app-download-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .footer-top-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Nav Drawer */
+        .mobile-drawer {
+            position: fixed;
+            top: 84px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 84px);
+            background: var(--bg-dark);
+            padding: 30px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 99;
+            overflow-y: auto;
+        }
+
+        .mobile-drawer.open {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-link {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-main);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav-link.active {
+            color: var(--accent-primary);
+        }
+
+        /* =========================================================
+       ABOUT REASON SECTION (VOXPOR SCREENSHOT STYLE)
+       ========================================================= */
+        .about-reason-section {
+            background: #080b13;
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        :root[data-theme="light"] .about-reason-section {
+            background: #f8fafc;
+        }
+
+        .about-reason-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        /* ---- Left: Image ---- */
+        .about-reason-visual {
+            position: relative;
+        }
+
+        .about-reason-img-wrap {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-reason-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .about-reason-visual:hover .about-reason-img-wrap img {
+            transform: scale(1.03);
+        }
+
+        /* Stat overlay - bottom-left corner of image */
+        .about-stat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 46%;
+            background: #11172b;
+            padding: 22px 28px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border-radius: 0 0 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        :root[data-theme="light"] .about-stat-overlay {
+            background: #1e293b;
+        }
+
+        .about-stat-number {
+            font-family: var(--font-heading);
+            font-size: 40px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .about-stat-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        /* ---- Right: Copy ---- */
+        .about-reason-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(30px, 3.5vw, 44px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1.2px;
+            line-height: 1.18;
+            margin-bottom: 20px;
+        }
+
+        :root[data-theme="light"] .about-reason-heading {
+            color: #0f172a;
+        }
+
+        .about-reason-highlight {
+            background: linear-gradient(135deg, #536dfe 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .about-reason-desc {
+            font-size: 15.5px;
+            line-height: 1.75;
+            color: #94a3b8;
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        :root[data-theme="light"] .about-reason-desc {
+            color: #475569;
+        }
+
+        /* Feature list with circular icons */
+        .about-feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .about-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+        }
+
+        .about-feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            color: #ffffff;
+            transition: var(--transition);
+        }
+
+        :root[data-theme="light"] .about-feature-icon {
+            background: #f1f5f9;
+            border-color: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .about-feature-item:hover .about-feature-icon {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(83, 109, 254, 0.4);
+            transform: scale(1.06);
+        }
+
+        .about-feature-text h3 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        :root[data-theme="light"] .about-feature-text h3 {
+            color: #0f172a;
+        }
+
+        .about-feature-text p {
+            font-size: 14.5px;
+            color: #94a3b8;
+            line-height: 1.65;
+        }
+
+        :root[data-theme="light"] .about-feature-text p {
+            color: #64748b;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .about-reason-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-stat-overlay {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-stat-number {
+                font-size: 30px;
+            }
+
+            .about-stat-label {
+                font-size: 13px;
+            }
+
+            .about-stat-overlay {
+                width: 55%;
+                padding: 16px 18px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+       SITE HEADER (VOXPOR NAVIGATION)
+       ========================================================= -->
+    <header class="site-header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+                <span class="logo-v">V</span>
+                <span class="logo-text">OXPOR</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li class="dropdown">
+                    <span class="nav-link dropdown-btn">Pages <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#steps">4 Steps</a></li>
+                        <li><a href="#tracking">Expenses</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#download">Download App</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right Action Items -->
+            <div class="nav-right">
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search..." aria-label="Search site">
+                </div>
+
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <a href="#download" class="btn-app">Download the App</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link active">About Us</a>
+        <a href="index.html#features" class="mobile-nav-link">Features</a>
+        <a href="#team" class="mobile-nav-link">Team</a>
+        <a href="#values" class="mobile-nav-link">Core Values</a>
+        <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+        <a href="#download" class="btn-app" style="margin-top: 15px; text-align: center;">Download the App</a>
+    </div>
+
+    <main>
+        <!-- =========================================================
+         HERO SECTION: ABOUT US
+         ========================================================= -->
+        <section class="hero-banner">
+            <div class="container">
+                <h1 class="hero-title">About Us</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">&gt;</span>
+                    <span class="breadcrumb-current">About Us</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         "THIS IS THE REASON WHY YOU SHOULD USE VOXPOR" SECTION
+         ========================================================= -->
+        <section class="about-reason-section">
+            <div class="container">
+                <div class="about-reason-grid">
+
+                    <!-- Left Column: Image + Stat Overlay -->
+                    <div class="about-reason-visual">
+                        <div class="about-reason-img-wrap">
+                            <img src="images/about-reason.jpg"
+                                alt="Voxpor – professional finance consultant holding a credit card" loading="lazy">
+                        </div>
+                        <!-- Stat Overlay Badge (bottom-left of image) -->
+                        <div class="about-stat-overlay">
+                            <span class="about-stat-number">6.7M</span>
+                            <span class="about-stat-label">Active User</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Copy + Feature Items -->
+                    <div class="about-reason-copy">
+                        <h2 class="about-reason-heading">
+                            This Is The Reason Why You Should <span class="about-reason-highlight">Use Voxpor</span>
+                        </h2>
+                        <p class="about-reason-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis consequat tincidunt ullamcorper hendrerit quam.
+                            Fermentum euismod dictum nunc amet tempus. Quis consequat tincidun
+                        </p>
+
+                        <!-- Feature Items with circular icons -->
+                        <ul class="about-feature-list">
+                            <li class="about-feature-item">
+                                <div class="about-feature-icon" aria-hidden="true">
+                                    <!-- Credit card / free trial icon -->
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                                        <line x1="1" y1="10" x2="23" y2="10" />
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <h3>30 Days Free Trial</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Quis consequat tincidunt ullamcorper
+                                        hendrerit quam</p>
+                                </div>
+                            </li>
+
+                            <li class="about-feature-item">
+                                <div class="about-feature-icon" aria-hidden="true">
+                                    <!-- Certified / badge icon -->
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="8" r="6" />
+                                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <h3>Certified &amp; Transparent</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Quis consequat tincidunt ullamcorper
+                                        hendrerit quam</p>
+                                </div>
+                            </li>
+
+                            <li class="about-feature-item">
+                                <div class="about-feature-icon" aria-hidden="true">
+                                    <!-- Support / headset icon -->
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                                        <path
+                                            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                                    </svg>
+                                </div>
+                                <div class="about-feature-text">
+                                    <h3>24/7 Professional Support</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Quis consequat tincidunt ullamcorper
+                                        hendrerit quam</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         4 STEPS TO FINANCIAL SUCCESS SECTION
+         ========================================================= -->
+        <section class="section-pad steps-section" id="steps">
+            <div class="container">
+                <div class="steps-header">
+                    <h2 class="steps-title">4 Steps To <span class="highlight-financial">Financial</span> Success</h2>
+                    <p class="steps-subtitle">
+                        Lorem ipsum dolor sit amet Quis sits consequat tincidunt ullamcorper Lorem ipsum dolor sit amet
+                        Quis sits t Lorem ipsum dolor sit amet Quis sits consequat tincidunt
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-card-body">
+                            <h3 class="step-card-title">Set disbursement instructions</h3>
+                            <p class="step-card-desc">Lorem ipsum dolor sit amet Quis sits consequat tincidunt</p>
+                        </div>
+                        <span class="step-card-num">01</span>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-card-body">
+                            <h3 class="step-card-title">Your customer receives funds</h3>
+                            <p class="step-card-desc">Lorem ipsum dolor sit amet Quis sits consequat tincidunt</p>
+                        </div>
+                        <span class="step-card-num">02</span>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-card-body">
+                            <h3 class="step-card-title">Assembly initiates disbursement</h3>
+                            <p class="step-card-desc">Lorem ipsum dolor sit amet Quis sits consequat tincidunt</p>
+                        </div>
+                        <span class="step-card-num">03</span>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-card-body">
+                            <h3 class="step-card-title">Retrieves funds from your account</h3>
+                            <p class="step-card-desc">Lorem ipsum dolor sit amet Quis sits consequat tincidunt</p>
+                        </div>
+                        <span class="step-card-num">04</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         TRACK YOUR DAILY EXPENSES SECTION
+         ========================================================= -->
+        <section class="section-pad track-section" id="tracking">
+            <div class="container">
+                <div class="track-grid">
+                    <!-- Left Content -->
+                    <div class="track-copy">
+                        <h2 class="track-heading">
+                            Track your daily <span class="highlight-expenses">expenses</span>
+                        </h2>
+                        <p class="track-lead">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut tellus luctus nec
+                            ullamcorper.tellus luctus nec
+                        </p>
+
+                        <div class="track-features-list">
+                            <!-- Feature 1 -->
+                            <div class="track-feature-item">
+                                <div class="track-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="track-feature-text">
+                                    <h3>Cloud-based accounting</h3>
+                                    <p>Lorem ipsum dolor sit amet, tellus luctus ne elit. Ut tellus luctus</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="track-feature-item">
+                                <div class="track-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                                <div class="track-feature-text">
+                                    <h3>Reduce time on data entry</h3>
+                                    <p>Lorem ipsum dolor sit amet, tellus luctus ne elit. Ut tellus luctus</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="track-feature-item">
+                                <div class="track-feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        <polyline points="4 6 10 10 16 4 20 8"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="track-feature-text">
+                                    <h3>GST and VAT tracking</h3>
+                                    <p>Lorem ipsum dolor sit amet, tellus luctus ne elit. Ut tellus luctus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="track-visual-container">
+                        <!-- Blue backdrop shape -->
+                        <div class="track-visual-backdrop"></div>
+                        <!-- Calculator Card -->
+                        <div class="track-cutout-card">
+                            <img src="images/Track-software.webp" alt="Expense quick add calculator" loading="lazy">
+                        </div>
+                        <!-- Phone Mockup -->
+                        <div class="track-phone-mockup">
+                            <img src="images/Tracking-mobile.webp" alt="Wallet and expense tracking app interface"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         MEET THE AMAZING TEAM SECTION
+         ========================================================= -->
+        <section class="section-pad team-showcase-section" id="team">
+            <div class="container">
+                <div class="team-showcase-grid">
+                    <!-- Card 1: William Owen -->
+                    <div class="team-showcase-card">
+                        <div class="team-card-image">
+                            <img src="images/OurTeam2.webp" alt="William Owen - Designer" loading="lazy">
+                        </div>
+                        <div class="team-card-footer">
+                            <div class="team-card-info">
+                                <h3 class="team-card-name">William Owen</h3>
+                                <p class="team-card-role">Designer</p>
+                            </div>
+                            <div class="team-card-socials">
+                                <a href="#" class="team-social-btn" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-social-btn" aria-label="Twitter">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-social-btn" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Juliana Silva -->
+                    <div class="team-showcase-card">
+                        <div class="team-card-image">
+                            <img src="images/OurTeam1.webp" alt="Juliana Silva - Chief Financial" loading="lazy">
+                        </div>
+                        <div class="team-card-footer">
+                            <div class="team-card-info">
+                                <h3 class="team-card-name">Juliana Silva</h3>
+                                <p class="team-card-role">Chief Financial</p>
+                            </div>
+                            <div class="team-card-socials">
+                                <a href="#" class="team-social-btn" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-social-btn" aria-label="Twitter">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-social-btn" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content: Heading & Intro -->
+                    <div class="team-showcase-content">
+                        <h2 class="team-showcase-title">
+                            Meet the<br>
+                            amazing team<br>
+                            <span class="highlight-team">behind Voxpor</span>
+                        </h2>
+                        <p class="team-showcase-desc">
+                            Lorem ipsum dolor sit amet Lorem dolor sit amet lorem site
+                        </p>
+                        <a href="#team" class="btn-team-readmore">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         FREQUENTLY ASKED QUESTIONS SECTION
+         ========================================================= -->
+        <section class="section-pad faq-section" id="faq">
+            <div class="container">
+                <div class="faq-header">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle">
+                        Lorem ipsum dolor sit amet Lorem dolor sit amet lorem site
+                    </p>
+                </div>
+
+                <div class="faq-grid">
+                    <!-- Left: Accordion -->
+                    <div class="faq-accordion">
+                        <!-- Item 1 (Active/Expanded) -->
+                        <div class="faq-item active">
+                            <button class="faq-question-btn" type="button" aria-expanded="true">
+                                <span>Can i make a free plan to get started?</span>
+                                <span class="faq-toggle-icon">−</span>
+                            </button>
+                            <div class="faq-answer-content">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the Lorem Ipsum is
+                                    simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="faq-item">
+                            <button class="faq-question-btn" type="button" aria-expanded="false">
+                                <span>How can i work with you and become your partner?</span>
+                                <span class="faq-toggle-icon">+</span>
+                            </button>
+                            <div class="faq-answer-content">
+                                <p>
+                                    Our partner ecosystem enables integration with leading banking networks, payment
+                                    gateways, and enterprise accounting software. Apply easily through our developer and
+                                    partner portal.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="faq-item">
+                            <button class="faq-question-btn" type="button" aria-expanded="false">
+                                <span>How can i work with you and become your partner?</span>
+                                <span class="faq-toggle-icon">+</span>
+                            </button>
+                            <div class="faq-answer-content">
+                                <p>
+                                    We offer bespoke corporate tier plans, revenue-sharing reseller models, and
+                                    dedicated technical integration support tailored specifically to financial
+                                    institutions and high-growth businesses.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact / Support Box -->
+                    <div class="faq-support-panel">
+                        <h3>Can ' t Find Answer?</h3>
+                        <p>Contact To Our Support Team</p>
+
+                        <a href="#download" class="faq-contact-card">
+                            <div class="contact-channels-icon">
+                                <!-- Phone -->
+                                <div class="channel-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <!-- Mail -->
+                                <div class="channel-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </div>
+                                <!-- @ -->
+                                <div class="channel-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                                    </svg>
+                                </div>
+                                <!-- Pointer/Hand -->
+                                <div class="channel-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+                                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                                        <path
+                                            d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <strong>Contact For More</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         DOWNLOAD APP SECTION
+         ========================================================= -->
+        <section class="section-pad app-download-section" id="download">
+            <div class="container">
+                <div class="app-download-grid">
+                    <!-- Left Column Copy -->
+                    <div class="app-download-copy">
+                        <h2 class="app-download-title">
+                            Download Latest Version Of<br>
+                            The <span class="highlight-app">App From</span>
+                        </h2>
+                        <p class="app-download-desc">
+                            Lorem ipsum dolor sit amet Quis sits ullam cLorem ipsum doloramet Quis sits t Lorem ipsum
+                            dolor sit amet Lorem ipsum dolor sit
+                        </p>
+                        <div class="app-download-buttons">
+                            <a href="#download" class="store-badge-btn">
+                                <img src="images/apple-logo.svg" alt="Apple Store" class="store-badge-icon">
+                                <div class="store-badge-text">
+                                    <small>Download On The</small>
+                                    <strong>App Store</strong>
+                                </div>
+                            </a>
+                            <a href="#download" class="store-badge-btn">
+                                <img src="images/google-play.svg" alt="Google Play" class="store-badge-icon">
+                                <div class="store-badge-text">
+                                    <small>GET IT ON</small>
+                                    <strong>Google Play</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Visual -->
+                    <div class="app-visual-wrapper">
+                        <div class="app-visual-backdrop"></div>
+                        <img src="images/Download-App.webp" alt="Voxpor mobile application interfaces"
+                            class="app-phones-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+       SITE FOOTER (VOXPOR DESIGN)
+       ========================================================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Col 1: Brand & Bio -->
+                <div class="footer-col-brand">
+                    <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+                        <span class="logo-v">V</span>
+                        <span class="logo-text">OXPOR</span>
+                    </a>
+                    <p class="footer-desc">
+                        Lorem ipsum dolor sit amet Quis sits ullam cLorem ipsum doloramet Quis sits t Lorem ipsum dolor
+                        sit amet Lorem ipsum dolor sit Lorem ipsum dolor
+                    </p>
+                </div>
+
+                <!-- Col 2: Newsletter Signup -->
+                <div class="footer-col-newsletter">
+                    <h4 class="footer-heading">Newsletter Signup</h4>
+                    <form class="footer-newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for subscribing to Voxpor!');">
+                        <input type="email" class="footer-newsletter-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Col 3: Contact Us -->
+                <div class="footer-col-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="footer-contact-list">
+                        <!-- Phone -->
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-info">
+                                <strong>Phone</strong>
+                                <a href="tel:+1234567890">+1 234 567 890</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-info">
+                                <strong>Email</strong>
+                                <a href="mailto:zBx6y@example.com">zBx6y@example.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2025 VOXPOR By Evonicmedia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+       INTERACTIVE JAVASCRIPT
+       ========================================================= -->
+    <script>
+        // Theme Toggle
+        const root = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = root.dataset.theme === 'dark';
+            const newTheme = isDark ? 'light' : 'dark';
+            root.dataset.theme = newTheme;
+            localStorage.setItem('voxpor-theme', newTheme);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+        });
+
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('open');
+            });
+        });
+
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-question-btn');
+            if (!btn) return;
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close others
+                faqItems.forEach(other => {
+                    other.classList.remove('active');
+                    const icon = other.querySelector('.faq-toggle-icon');
+                    if (icon) icon.textContent = '+';
+                    const otherBtn = other.querySelector('.faq-question-btn');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                });
+                // Toggle clicked
+                if (!isActive) {
+                    item.classList.add('active');
+                    const icon = item.querySelector('.faq-toggle-icon');
+                    if (icon) icon.textContent = '−';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
