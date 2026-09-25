@@ -117,12 +117,12 @@
           <h1>Take control of your <span>finances</span></h1>
           <p class="hero-intro">Deximo helps you track expenses, manage your money and make better financial decisions —
             all from one simple app.</p>
-          <div class="button-row store-buttons hero-stores">
+          <!-- <div class="button-row store-buttons hero-stores">
             <a class="store-button apple-store" href="#download"><img src="images/apple-logo.svg"
                 alt=""><span><small>Download on the</small>App Store</span></a>
             <a class="store-button google-store" href="#download"><img src="images/google-play.svg"
                 alt=""><span><small>GET IT ON</small>Google Play</span></a>
-          </div>
+          </div> -->
           <div class="hero-proof"><span class="proof-dots"><i></i><i></i><i></i></span><span>Built for your everyday
               finances</span></div>
         </div>
@@ -256,14 +256,76 @@
     </section>
   </main>
 
+  <!-- =========================================================
+       SITE FOOTER (VOXPOR DESIGN)
+       ========================================================= -->
   <footer class="site-footer">
-    <div class="container footer-top"><a class="brand" href="#top"><span
-          class="brand-mark">d</span><span>deximo</span></a>
-      <p>Simple tools for better financial decisions.</p><a class="button button-primary" href="#download">Get the app
-        <span aria-hidden="true">↗</span></a>
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+            <span class="logo-v">V</span>
+            <span class="logo-text">OXPOR</span>
+          </a>
+          <p class="footer-desc">
+            Lorem ipsum dolor sit amet Quis sits ullam cLorem ipsum doloramet Quis sits t Lorem ipsum dolor
+            sit amet Lorem ipsum dolor sit Lorem ipsum dolor
+          </p>
+        </div>
+
+        <!-- Col 2: Newsletter Signup -->
+        <div class="footer-col-newsletter">
+          <h4 class="footer-heading">Newsletter Signup</h4>
+          <form class="footer-newsletter-form"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Voxpor!');">
+            <input type="email" class="footer-newsletter-input" placeholder="Enter your email" required
+              aria-label="Email address">
+            <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Col 3: Contact Us -->
+        <div class="footer-col-contact">
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact-list">
+            <!-- Phone -->
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="footer-contact-info">
+                <strong>Phone</strong>
+                <a href="tel:+1234567890">+1 234 567 890</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <div class="footer-contact-info">
+                <strong>Email</strong>
+                <a href="mailto:zBx6y@example.com">zBx6y@example.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2025 VOXPOR By Evonicmedia. All Rights Reserved.</p>
+      </div>
     </div>
-    <div class="container footer-bottom"><span>© 2024 Deximo. All rights reserved.</span><span>Privacy policy &nbsp;
-        Terms of use</span></div>
   </footer>
   <script>
     const root = document.documentElement;
