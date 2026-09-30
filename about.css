@@ -26,7 +26,7 @@
              --radius-lg: 24px;
              --radius-full: 9999px;
 
-             --max-width: 1200px;
+             --max-width: 1100px;
              --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
          }
 
@@ -499,8 +499,8 @@
 
          .reason-heading {
              font-family: var(--font-heading);
-             font-size: clamp(32px, 4vw, 46px);
-             font-weight: 800;
+             font-size: clamp(32px, 4vw, 42px);
+             font-weight: 600;
              line-height: 1.15;
              letter-spacing: -1.2px;
              color: var(--text-main);
@@ -509,7 +509,7 @@
 
          .reason-heading .highlight-voxpor {
              color: var(--accent-primary);
-             background: linear-gradient(135deg, #536dfe 0%, #a855f7 100%);
+             background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
              -webkit-background-clip: text;
              -webkit-text-fill-color: transparent;
              display: inline-block;
@@ -610,8 +610,8 @@
 
          .steps-title {
              font-family: var(--font-heading);
-             font-size: clamp(34px, 4.5vw, 48px);
-             font-weight: 800;
+             font-size: clamp(34px, 4.5vw, 42px);
+             font-weight: 600;
              color: #ffffff;
              letter-spacing: -1.2px;
              line-height: 1.15;
@@ -624,7 +624,7 @@
 
          .steps-title .highlight-financial {
              color: #536dfe;
-             background: linear-gradient(135deg, #4f75f8 0%, #7d93fb 100%);
+             background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
              -webkit-background-clip: text;
              -webkit-text-fill-color: transparent;
              display: inline-block;
@@ -650,17 +650,14 @@
 
          .step-card {
              background: #02050c;
-             border: 1px solid rgba(255, 255, 255, 0.08);
-             border-radius: var(--radius-lg);
-             padding: 40px 30px 36px;
+             border-radius: var(--radius-md);
+             padding: 30px;
              display: flex;
              flex-direction: column;
              justify-content: space-between;
-             min-height: 310px;
-             transition: var(--transition);
              position: relative;
              overflow: hidden;
-             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+             cursor: pointer;
          }
 
          :root[data-theme="light"] .step-card {
@@ -682,18 +679,19 @@
          }
 
          .step-card:hover {
-             transform: translateY(-8px);
-             border-color: rgba(83, 109, 254, 0.4);
-             box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55), 0 0 25px rgba(83, 109, 254, 0.15);
+             background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
+             transition: 0.3s ease;
+
+
          }
 
          :root[data-theme="light"] .step-card:hover {
-             box-shadow: 0 20px 40px rgba(83, 109, 254, 0.12);
-             border-color: var(--accent-primary);
+             background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
+
          }
 
          .step-card:hover::after {
-             opacity: 1;
+             opacity: 0;
          }
 
          .step-card-body {
@@ -709,20 +707,32 @@
              color: #ffffff;
              line-height: 1.35;
              letter-spacing: -0.4px;
+             transition: color 0.3s ease;
          }
 
          :root[data-theme="light"] .step-card-title {
              color: #0f172a;
          }
 
+         .step-card:hover .step-card-title,
+         :root[data-theme="light"] .step-card:hover .step-card-title {
+             color: #ffffff;
+         }
+
          .step-card-desc {
              font-size: 14.5px;
              color: #8e9cb0;
              line-height: 1.65;
+             transition: color 0.3s ease;
          }
 
          :root[data-theme="light"] .step-card-desc {
              color: #64748b;
+         }
+
+         .step-card:hover .step-card-desc,
+         :root[data-theme="light"] .step-card:hover .step-card-desc {
+             color: rgba(255, 255, 255, 0.88);
          }
 
          .step-card-num {
@@ -734,10 +744,16 @@
              letter-spacing: -1px;
              margin-top: 36px;
              display: block;
+             transition: color 0.3s ease;
          }
 
          :root[data-theme="light"] .step-card-num {
              color: #0f172a;
+         }
+
+         .step-card:hover .step-card-num,
+         :root[data-theme="light"] .step-card:hover .step-card-num {
+             color: #ffffff;
          }
 
          /* =========================================================
@@ -1745,9 +1761,6 @@
              color: #64748b;
          }
 
-         font-size: 13.5px;
-         color: var(--text-faint);
-         }
 
          .footer-socials {
              display: flex;
@@ -2053,6 +2066,15 @@
          /* ---- Left: Image ---- */
          .about-reason-visual {
              position: relative;
+             opacity: 0;
+             transform: translateY(-80px);
+             transition: 3s ease;
+             will-change: transform, opacity;
+         }
+
+         .about-reason-visual.is-visible {
+             opacity: 1;
+             transform: translateY(0);
          }
 
          .about-reason-img-wrap {
@@ -2108,10 +2130,22 @@
          }
 
          /* ---- Right: Copy ---- */
+         .about-reason-copy {
+             opacity: 0;
+             transform: translateY(80px);
+             transition: 3s ease;
+             will-change: transform, opacity;
+         }
+
+         .about-reason-copy.is-visible {
+             opacity: 1;
+             transform: translateY(0);
+         }
+
          .about-reason-heading {
              font-family: var(--font-heading);
-             font-size: clamp(30px, 3.5vw, 44px);
-             font-weight: 800;
+             font-size: clamp(30px, 3.5vw, 42px);
+             font-weight: 600;
              color: #ffffff;
              letter-spacing: -1.2px;
              line-height: 1.18;
@@ -2123,7 +2157,7 @@
          }
 
          .about-reason-highlight {
-             background: linear-gradient(135deg, #536dfe 0%, #a78bfa 100%);
+             background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
              -webkit-background-clip: text;
              -webkit-text-fill-color: transparent;
              display: inline-block;

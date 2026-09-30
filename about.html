@@ -145,7 +145,7 @@
                     <!-- Right Column: Copy + Feature Items -->
                     <div class="about-reason-copy">
                         <h2 class="about-reason-heading">
-                            This Is The Reason Why You Should <span class="about-reason-highlight">Use Voxpor</span>
+                            This Is The Reason Why You Should <span class="about-reason-highlight">Use Deximo</span>
                         </h2>
                         <p class="about-reason-desc">
                             Lorem ipsum dolor sit amet consectetur. Quis consequat tincidunt ullamcorper hendrerit quam.
@@ -331,7 +331,7 @@
 
             <!-- Bottom Bar -->
             <div class="footer-bottom">
-                <p>Copyright &copy; 2025 VOXPOR By Evonicmedia. All Rights Reserved.</p>
+                <p>Copyright &copy; 2025 Deximo By Evonicmedia. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -389,6 +389,24 @@
                 }
             });
         });
+
+        // About Reason Slide-in Animation on Scroll / Page Load
+        const reasonElements = document.querySelectorAll('.about-reason-visual, .about-reason-copy');
+        if ('IntersectionObserver' in window) {
+            const reasonObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            reasonElements.forEach(el => reasonObserver.observe(el));
+        } else {
+            // Fallback for browsers without IntersectionObserver
+            reasonElements.forEach(el => el.classList.add('is-visible'));
+        }
     </script>
 </body>
 
