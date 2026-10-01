@@ -64,6 +64,67 @@
     .footer-newsletter-btn:hover {
       box-shadow: 0 8px 20px rgba(109, 40, 217, .4);
     }
+
+    /* --- mobile nav: only the hamburger stays in the bar --- */
+    @media (max-width: 992px) {
+      .nav-right .theme-toggle-btn,
+      .nav-right .btn-app {
+        display: none;
+      }
+    }
+
+    .drawer-theme-btn {
+      margin-top: 15px;
+      text-align: center;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* --- full-height mobile drawer with its own close icon --- */
+    @media (max-width: 992px) {
+      .mobile-drawer {
+        top: 0;
+        height: 100vh;
+        height: 100dvh;
+        padding-top: 96px;
+        z-index: 200;
+      }
+    }
+
+    .drawer-close-btn {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .drawer-close-btn:hover,
+    .drawer-close-btn:focus-visible {
+      color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+
+    /* --- center the "expense tracking overview" image on mobile --- */
+    @media (max-width: 900px) {
+      .intro-visual {
+        align-self: center;
+        justify-content: center;
+      }
+
+      .intro-visual img {
+        margin-inline: auto;
+      }
+    }
   </style>
 </head>
 
@@ -139,12 +200,19 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close-btn" id="mobileDrawerClose" type="button" aria-label="Close navigation">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
     <a href="index.html" class="mobile-nav-link">Home</a>
     <a href="about.html" class="mobile-nav-link active">About Us</a>
     <a href="index.html#features" class="mobile-nav-link">Features</a>
     <a href="#team" class="mobile-nav-link">Team</a>
     <a href="#values" class="mobile-nav-link">Core Values</a>
     <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+    <button class="btn-app drawer-theme-btn" id="themeToggleMobile" type="button" aria-label="Toggle theme">Switch theme</button>
     <a href="signin.html" class="btn-app" style="margin-top: 15px; text-align: center;">Sign in</a>
     <a href="signup.html" class="btn-app" style="margin-top: 15px; text-align: center;">Get Started</a>
   </div>
@@ -157,7 +225,6 @@
           <div class="hero-orbit orbit-two"></div>
           <div class="hero-orbit orbit-one"></div>
           <div class="hero-orbit orbit-two"></div> -->
-          <div class="hero-blob"></div>
           <img src="images/Mobile-Mockup.webp" alt="Dixemo mobile app dashboard" class="hero-phone">
           <img src="images/cardpay.webp" alt="" class="hero-icon hero-icon-cardpay" aria-hidden="true">
           <img src="images/dollar-icon.webp" alt="" class="hero-icon hero-icon-dollar" aria-hidden="true">
@@ -387,23 +454,26 @@
   <script>
     const root = document.documentElement;
     const themeButton = document.getElementById('themeToggle');
+    const themeButtonMobile = document.getElementById('themeToggleMobile');
+    const themeButtons = [themeButton, themeButtonMobile].filter(Boolean);
     const menuButton = document.getElementById('mobileMenuBtn');
     const mobileNav = document.getElementById('mobileDrawer');
 
-    function updateThemeButton() {
-      if (!themeButton) return;
+    function updateThemeButtons() {
       const isDark = root.dataset.theme === 'dark';
-      themeButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      themeButtons.forEach((btn) => btn.setAttribute('aria-label', label));
+      if (themeButtonMobile) themeButtonMobile.textContent = isDark ? 'Light mode' : 'Dark mode';
     }
 
-    if (themeButton) {
-      themeButton.addEventListener('click', () => {
+    themeButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
         const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
         root.dataset.theme = nextTheme;
         localStorage.setItem('dixemo-theme', nextTheme);
-        updateThemeButton();
+        updateThemeButtons();
       });
-    }
+    });
 
     if (menuButton && mobileNav) {
       menuButton.addEventListener('click', () => {
@@ -417,6 +487,15 @@
         menuButton.setAttribute('aria-expanded', 'false');
         menuButton.setAttribute('aria-label', 'Open navigation');
       }));
+
+      const drawerClose = document.getElementById('mobileDrawerClose');
+      if (drawerClose) {
+        drawerClose.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open navigation');
+        });
+      }
     }
 
     const revealItems = document.querySelectorAll('main > section, .site-footer');
@@ -436,7 +515,7 @@
       revealItems.forEach((item) => item.classList.add('is-visible'));
     }
 
-    updateThemeButton();
+    updateThemeButtons();
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

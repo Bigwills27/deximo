@@ -33,3 +33,6 @@ Desktop.ini
 *.swo
 *~
 
+
+# Local Playwright/QA helper scripts (never ship)
+_*.mjs
