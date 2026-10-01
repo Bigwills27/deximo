@@ -18,53 +18,6 @@
     document.documentElement.dataset.theme = localStorage.getItem('deximo-theme') || 'dark';
   </script>
   <link rel="stylesheet" href="styles.css">
-  <!-- =========================================================
-       Deximo landing page — purple accent overrides (landing only)
-       Backgrounds stay as they were; only accents go violet/purple.
-       ========================================================= -->
-  <style>
-    /* --- brand accents (light) --- */
-    :root {
-      --primary: #7c3aed;
-      --primary-soft: #c9b6fd;
-      --highlight-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-      --accent-primary: #8b5cf6;
-      --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-      --accent-glow: rgba(139, 92, 246, .12);
-      --accent-cyan: #a78bfa;
-      --border-accent: rgba(139, 92, 246, .4);
-    }
-
-    /* --- brand accents (dark) --- */
-    :root[data-theme="dark"] {
-      --primary: #a78bfa;
-      --primary-soft: #c4b5fd;
-      --highlight-gradient: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
-      --accent-primary: #8b5cf6;
-      --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-      --accent-glow: rgba(139, 92, 246, .25);
-      --accent-cyan: #a78bfa;
-      --border-accent: rgba(139, 92, 246, .35);
-    }
-
-    :root[data-theme="light"] {
-      --accent-glow: rgba(139, 92, 246, .12);
-      --border-accent: rgba(139, 92, 246, .4);
-    }
-
-    /* --- hardcoded blue accents --- */
-    .dropdown-menu a:hover {
-      background: rgba(139, 92, 246, .1);
-    }
-
-    .footer-newsletter-btn {
-      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-    }
-
-    .footer-newsletter-btn:hover {
-      box-shadow: 0 8px 20px rgba(109, 40, 217, .4);
-    }
-  </style>
 </head>
 
 <body>
@@ -153,10 +106,10 @@
     <section class="hero section-pad">
       <div class="container hero-grid">
         <div class="hero-visual">
-          <!-- <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-one"></div>
           <div class="hero-orbit orbit-two"></div>
           <div class="hero-orbit orbit-one"></div>
-          <div class="hero-orbit orbit-two"></div> -->
+          <div class="hero-orbit orbit-two"></div>
           <div class="hero-blob"></div>
           <img src="images/Mobile-Mockup.webp" alt="Deximo mobile app dashboard" class="hero-phone">
           <img src="images/cardpay.webp" alt="" class="hero-icon hero-icon-cardpay" aria-hidden="true">
@@ -184,28 +137,28 @@
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
           <div class="marquee-group">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
           </div>
           <div class="marquee-group" aria-hidden="true">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
-            <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
+          <img src="images/partner2.webp" alt="">
           </div>
         </div>
       </div>
@@ -241,7 +194,7 @@
     </section>
 
 
-    <section class="gallery-section section-pad" data-gallery data-autoplay="8000">
+    <section class="gallery-section section-pad" data-carousel data-autoplay="8000">
       <div class="container gallery-heading">
         <div>
           <h2>View app features</h2>
@@ -249,35 +202,33 @@
         <p class="section-lead">A simple, intuitive experience designed to help you make every financial decision with
           confidence.</p>
       </div>
-      <div class="gallery-window" data-gallery-viewport>
-        <div class="gallery-track" data-gallery-track>
-          <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo budgeting feature"
-              loading="lazy"></div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo expense feature" loading="lazy">
+      <div class="gallery-window" data-carousel-viewport>
+        <div class="gallery-track" data-carousel-track>
+          <div class="gallery-page">
+            <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo budgeting feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo expense feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo payments feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo dashboard feature"></div>
           </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo payments feature" loading="lazy">
+          <div class="gallery-page">
+            <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo budgeting feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo expense feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo payments feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo dashboard feature"></div>
           </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo budgeting feature"
-              loading="lazy"></div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo expense feature" loading="lazy">
-          </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo payments feature" loading="lazy">
-          </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo budgeting feature"
-              loading="lazy"></div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo expense feature" loading="lazy">
-          </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo payments feature" loading="lazy">
-          </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo budgeting feature"
-              loading="lazy"></div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo expense feature" loading="lazy">
-          </div>
-          <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo payments feature" loading="lazy">
+          <div class="gallery-page">
+            <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo budgeting feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery1.webp" alt="Deximo expense feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery2.webp" alt="Deximo payments feature"></div>
+            <div class="gallery-card"><img src="images/Mobile-Gallery3.webp" alt="Deximo dashboard feature"></div>
           </div>
         </div>
       </div>
-      <div class="carousel-dots" data-gallery-dots role="tablist" aria-label="App feature pages"></div>
+      <div class="carousel-dots" role="tablist" aria-label="App feature pages">
+        <button type="button" class="carousel-dot is-active" data-carousel-dot aria-label="Show features page 1"></button>
+        <button type="button" class="carousel-dot" data-carousel-dot aria-label="Show features page 2"></button>
+        <button type="button" class="carousel-dot" data-carousel-dot aria-label="Show features page 3"></button>
+      </div>
     </section>
 
     <section class="testimonial section-pad" data-carousel data-autoplay="10000">
@@ -303,8 +254,7 @@
           </div>
         </div>
         <div class="carousel-dots" role="tablist" aria-label="Testimonials">
-          <button type="button" class="carousel-dot is-active" data-carousel-dot
-            aria-label="Show testimonial 1"></button>
+          <button type="button" class="carousel-dot is-active" data-carousel-dot aria-label="Show testimonial 1"></button>
           <button type="button" class="carousel-dot" data-carousel-dot aria-label="Show testimonial 2"></button>
         </div>
       </div>
@@ -515,135 +465,30 @@
 
       goTo(0);
     });
+  </script>
 
-    // ---- responsive app-features gallery (4 / 3 / 2 / 1 per view) ----
-    document.querySelectorAll('[data-gallery]').forEach((gallery) => {
-      const track = gallery.querySelector('[data-gallery-track]');
-      const viewport = gallery.querySelector('[data-gallery-viewport]');
-      const dotsBox = gallery.querySelector('[data-gallery-dots]');
-      const cards = Array.from(track.children);
-      const total = cards.length;
-      const delay = Number(gallery.dataset.autoplay) || 8000;
-      let perView = 4;
-      let maxIndex = 0;
-      let index = 0;
-      let step = 0;
-      let timer = null;
-      let dragging = false;
-      let startX = 0;
-      let deltaX = 0;
-      let baseX = 0;
-
-      const measure = () => {
-        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-        const padLeft = parseFloat(getComputedStyle(track).paddingLeft) || 0;
-        const padRight = parseFloat(getComputedStyle(track).paddingRight) || 0;
-        const cardW = cards[0] ? cards[0].getBoundingClientRect().width : 0;
-        const usable = (viewport.clientWidth || 0) - padLeft - padRight;
-        let n = 1;
-        if (cardW > 0) {
-          n = Math.max(1, Math.floor((usable + gap) / (cardW + gap)));
-        }
-        perView = Math.min(total, n);
-        maxIndex = Math.max(0, total - perView);
-        step = cardW + gap;
-        return { gap };
-      };
-
-      const renderDots = () => {
-        if (!dotsBox) return;
-        if (dotsBox.children.length !== maxIndex + 1) {
-          dotsBox.innerHTML = '';
-          for (let i = 0; i <= maxIndex; i++) {
-            const dot = document.createElement('button');
-            dot.type = 'button';
-            dot.className = 'carousel-dot' + (i === index ? ' is-active' : '');
-            dot.setAttribute('data-gallery-dot', '');
-            dot.setAttribute('aria-label', 'Show features position ' + (i + 1));
-            dot.addEventListener('click', () => {
-              goTo(i);
-              start();
-            });
-            dotsBox.appendChild(dot);
-          }
-        } else {
-          Array.from(dotsBox.children).forEach((dot, i) => {
-            dot.classList.toggle('is-active', i === index);
-          });
-        }
-      };
-
-      const goTo = (next) => {
-        index = Math.max(0, Math.min(maxIndex, next));
-        track.style.transform = 'translateX(-' + (index * step) + 'px)';
-        renderDots();
-      };
-
-      const stop = () => {
-        if (timer) {
-          clearInterval(timer);
-          timer = null;
-        }
-      };
-
-      const start = () => {
-        if (prefersReducedMotion || maxIndex < 1) return;
-        stop();
-        timer = setInterval(() => goTo(index >= maxIndex ? 0 : index + 1), delay);
-      };
-
-      const layout = () => {
-        measure();
-        if (index > maxIndex) index = maxIndex;
-        goTo(index);
-      };
-
-      if (viewport) {
-        viewport.addEventListener('pointerdown', (event) => {
-          dragging = true;
-          startX = event.clientX;
-          deltaX = 0;
-          baseX = -index * step;
-          stop();
-        });
-
-        viewport.addEventListener('pointermove', (event) => {
-          if (!dragging) return;
-          deltaX = event.clientX - startX;
-          track.style.transition = 'none';
-          track.style.transform = 'translateX(' + (baseX + deltaX) + 'px)';
-        });
-
-        const endDrag = () => {
-          if (!dragging) return;
-          dragging = false;
-          track.style.transition = '';
-          const width = viewport.clientWidth || 1;
-          if (Math.abs(deltaX) > width * 0.08) {
-            goTo(index + (deltaX < 0 ? 1 : -1));
-          } else {
-            goTo(index);
-          }
-          start();
-        };
-
-        viewport.addEventListener('pointerup', endDrag);
-        viewport.addEventListener('pointercancel', endDrag);
-        viewport.addEventListener('pointerleave', endDrag);
-      }
-
-      window.addEventListener('resize', layout);
-
-      if ('IntersectionObserver' in window && !prefersReducedMotion) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => (entry.isIntersecting ? start() : stop()));
-        }, { threshold: 0.35 });
-        observer.observe(gallery);
-      } else {
-        start();
-      }
-
-      layout();
+  <div id="probeout">PENDING</div>
+  <script>
+    window.addEventListener('load', () => {
+      const out = [];
+      const g = document.querySelector('.gallery-section');
+      const vp = g.querySelector('[data-carousel-viewport]');
+      const tr = g.querySelector('[data-carousel-track]');
+      const evts = [];
+      ['pointerdown','pointermove','pointerup','pointercancel','pointerleave'].forEach(t =>
+        vp.addEventListener(t, () => evts.push(t), true));
+      // synthetic drag
+      const r = vp.getBoundingClientRect();
+      const y = r.top + r.height/2;
+      const mk = (type, x) => new PointerEvent(type, {bubbles:true, cancelable:true, clientX:x, clientY:y, pointerId:1, pointerType:'mouse', isPrimary:true, buttons:1});
+      vp.dispatchEvent(mk('pointerdown', r.left + r.width*0.8));
+      vp.dispatchEvent(mk('pointermove', r.left + r.width*0.2));
+      vp.dispatchEvent(mk('pointerup', r.left + r.width*0.2));
+      out.push('evts=' + evts.join(','));
+      out.push('afterDrag=' + (tr.style.transform||'none'));
+      out.push('vpRect=' + Math.round(r.width) + 'x' + Math.round(r.height) + '@' + Math.round(r.top));
+      out.push('trackTouchAction=' + getComputedStyle(tr).touchAction);
+      document.getElementById('probeout').textContent = out.join(' ;; ');
     });
   </script>
 </body>

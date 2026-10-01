@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="About Voxpor – Modern Business & Finance Startup HTML Template. Empowering businesses and individuals with smarter financial tools.">
-    <title>About Us — Voxpor Business & Finance Startup</title>
+        content="About Deximo – Modern Business & Finance Startup HTML Template. Empowering businesses and individuals with smarter financial tools.">
+    <title>About Us — Deximo Business & Finance Startup</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 
     <script>
         document.documentElement.classList.add('js');
-        document.documentElement.dataset.theme = localStorage.getItem('voxpor-theme') || 'dark';
+        document.documentElement.dataset.theme = localStorage.getItem('deximo-theme') || 'dark';
     </script>
 
 </head>
@@ -26,12 +26,12 @@
 <body>
 
     <!-- =========================================================
-       SITE HEADER (VOXPOR NAVIGATION)
+       SITE HEADER (DEXIMO NAVIGATION)
        ========================================================= -->
     <header class="site-header">
         <div class="nav-container">
             <!-- Logo -->
-            <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+            <a href="index.html" class="brand-logo" aria-label="Deximo home">
                 <span class="logo-v">d</span>
                 <span class="logo-text">deximo</span>
             </a>
@@ -123,7 +123,7 @@
         </section>
 
         <!-- =========================================================
-         "THIS IS THE REASON WHY YOU SHOULD USE VOXPOR" SECTION
+         "THIS IS THE REASON WHY YOU SHOULD USE DEXIMO" SECTION
          ========================================================= -->
         <section class="about-reason-section">
             <div class="container">
@@ -133,7 +133,7 @@
                     <div class="about-reason-visual">
                         <div class="about-reason-img-wrap">
                             <img src="images/active-user.webp"
-                                alt="Voxpor – professional finance consultant holding a credit card" loading="lazy">
+                                alt="Deximo – professional finance consultant holding a credit card" loading="lazy">
                         </div>
                         <!-- Stat Overlay Badge (bottom-left of image) -->
                         <div class="about-stat-overlay">
@@ -145,6 +145,7 @@
                     <!-- Right Column: Copy + Feature Items -->
                     <div class="about-reason-copy">
                         <h2 class="about-reason-heading">
+                            This Is The Reason Why You Should <span class="about-reason-highlight">Use Deximo</span>
                             This Is The Reason Why You Should <span class="about-reason-highlight">Use Deximo</span>
                         </h2>
                         <p class="about-reason-desc">
@@ -265,14 +266,14 @@
     </main>
 
     <!-- =========================================================
-       SITE FOOTER (VOXPOR DESIGN)
+       SITE FOOTER (DEXIMO DESIGN)
        ========================================================= -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top-grid">
                 <!-- Col 1: Brand & Bio -->
                 <div class="footer-col-brand">
-                    <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+                    <a href="index.html" class="brand-logo" aria-label="Deximo home">
                         <span class="logo-v">D</span>
                         <span class="logo-text">Deximo</span>
                     </a>
@@ -286,7 +287,7 @@
                 <div class="footer-col-newsletter">
                     <h4 class="footer-heading">Newsletter Signup</h4>
                     <form class="footer-newsletter-form"
-                        onsubmit="event.preventDefault(); alert('Thank you for subscribing to Voxpor!');">
+                        onsubmit="event.preventDefault(); alert('Thank you for subscribing to Deximo!');">
                         <input type="email" class="footer-newsletter-input" placeholder="Enter your email" required
                             aria-label="Email address">
                         <button type="submit" class="footer-newsletter-btn">Subscribe</button>
@@ -348,7 +349,7 @@
             const isDark = root.dataset.theme === 'dark';
             const newTheme = isDark ? 'light' : 'dark';
             root.dataset.theme = newTheme;
-            localStorage.setItem('voxpor-theme', newTheme);
+            localStorage.setItem('deximo-theme', newTheme);
         });
 
         // Mobile Menu Toggle

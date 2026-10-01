@@ -1,0 +1,15 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1440,height:900} });
+await p.goto('http://127.0.0.1:5599/index.html', { waitUntil:'networkidle' });
+await p.waitForTimeout(800);
+const btn = p.locator('.footer-newsletter-btn').first();
+await btn.scrollIntoViewIfNeeded(); await p.waitForTimeout(500);
+const bb = await btn.boundingBox();
+await p.screenshot({ path:'/tmp/sub2.png', clip:bb });
+const dots = p.locator('[data-gallery-dots]').first();
+await dots.scrollIntoViewIfNeeded(); await p.waitForTimeout(400);
+const db = await dots.boundingBox();
+await p.screenshot({ path:'/tmp/dots2.png', clip:db });
+console.log(JSON.stringify({btn:bb, dots:db}));
+await b.close();
