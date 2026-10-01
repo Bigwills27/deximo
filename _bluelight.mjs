@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-await page.addInitScript(() => localStorage.setItem('deximo-theme','light'));
+await page.addInitScript(() => localStorage.setItem('dixemo-theme','light'));
 await page.goto('http://127.0.0.1:5599/index.html', { waitUntil: 'load' });
 await page.waitForTimeout(1000);
 const res = await page.evaluate(() => {

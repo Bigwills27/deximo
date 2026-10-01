@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Create your free Deximo account and start taking control of your finances today.">
-  <title>Sign Up — Deximo</title>
+  <meta name="description" content="Create your free Dixemo account and start taking control of your finances today.">
+  <title>Sign Up — Dixemo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,7 +13,7 @@
     rel="stylesheet">
   <script>
     document.documentElement.classList.add('js');
-    document.documentElement.dataset.theme = localStorage.getItem('deximo-theme') || 'dark';
+    document.documentElement.dataset.theme = localStorage.getItem('dixemo-theme') || 'dark';
   </script>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -371,8 +371,8 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Deximo home"><span
-          class="brand-mark">d</span><span>deximo</span></a>
+      <a class="brand" href="index.html" aria-label="Dixemo home"><span
+          class="brand-mark">d</span><span>dixemo</span></a>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="index.html#features">Features</a>
         <a href="about.html">About us</a>
@@ -408,8 +408,8 @@
 
       <div class="auth-form-panel">
         <div class="auth-form-wrap">
-          <a class="auth-form-logo" href="index.html" aria-label="Deximo home">
-            <span class="brand-mark">d</span>deximo
+          <a class="auth-form-logo" href="index.html" aria-label="Dixemo home">
+            <span class="brand-mark">d</span>dixemo
           </a>
           <h1 class="auth-form-heading">Create your account</h1>
           <p class="auth-form-sub">Already have an account? <a href="signin.html">Sign in</a></p>
@@ -554,7 +554,7 @@
             <!-- Terms checkbox -->
             <label class="auth-check-wrap">
               <input type="checkbox" id="agree-terms" name="terms" required>
-              I agree to the Deximo <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+              I agree to the Dixemo <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
             </label>
 
             <button class="auth-submit" type="submit" id="signup-btn">
@@ -575,12 +575,12 @@
 
   <footer class="site-footer">
     <div class="container footer-top">
-      <a class="brand" href="index.html"><span class="brand-mark">d</span><span>deximo</span></a>
+      <a class="brand" href="index.html"><span class="brand-mark">d</span><span>dixemo</span></a>
       <p>Simple tools for better financial decisions.</p>
       <a class="button button-primary" href="index.html">Back to home <span aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="container footer-bottom">
-      <span>&copy; 2024 Deximo. All rights reserved.</span>
+      <span>&copy; 2024 Dixemo. All rights reserved.</span>
       <span>Privacy policy &nbsp; Terms of use</span>
     </div>
   </footer>
@@ -598,7 +598,7 @@
     themeButton.addEventListener('click', () => {
       const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
       root.dataset.theme = next;
-      localStorage.setItem('deximo-theme', next);
+      localStorage.setItem('dixemo-theme', next);
       updateThemeButton();
     });
     menuButton.addEventListener('click', () => {

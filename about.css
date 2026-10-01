@@ -1,5 +1,5 @@
          /* =========================================================
-       DEXIMO ABOUT PAGE DESIGN SYSTEM & STYLES
+       DIXEMO ABOUT PAGE DESIGN SYSTEM & STYLES
        ========================================================= */
          :root {
              --bg-dark: #080b13;
@@ -85,7 +85,7 @@
          }
 
          /* =========================================================
-       HEADER & NAVIGATION (DEXIMO STYLE)
+       HEADER & NAVIGATION (DIXEMO STYLE)
        ========================================================= */
          .site-header {
              position: sticky;
@@ -386,7 +386,7 @@
          }
 
          /* =========================================================
-       "THIS IS THE REASON WHY YOU SHOULD USE DEXIMO" SECTION
+       "THIS IS THE REASON WHY YOU SHOULD USE DIXEMO" SECTION
        ========================================================= */
          .section-pad {
              padding: 110px 0;
@@ -507,7 +507,7 @@
              margin-bottom: 24px;
          }
 
-         .reason-heading .highlight-deximo {
+         .reason-heading .highlight-dixemo {
              color: var(--accent-primary);
              background: linear-gradient(90deg, #508ac8 0%, #332a7a 100%);
              -webkit-background-clip: text;
@@ -1592,7 +1592,7 @@
          }
 
          /* =========================================================
-       FOOTER (DEXIMO DESIGN)
+       FOOTER (DIXEMO DESIGN)
        ========================================================= */
          .site-footer {
              background: #040711;
@@ -2043,7 +2043,7 @@
          }
 
          /* =========================================================
-       ABOUT REASON SECTION (DEXIMO SCREENSHOT STYLE)
+       ABOUT REASON SECTION (DIXEMO SCREENSHOT STYLE)
        ========================================================= */
          .about-reason-section {
              background: #080b13;

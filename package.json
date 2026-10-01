@@ -1,5 +1,5 @@
 {
-  "name": "deximo",
+  "name": "dixemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bigwills27/deximo.git"
+    "url": "git+https://github.com/Bigwills27/dixemo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bigwills27/deximo/issues"
+    "url": "https://github.com/Bigwills27/dixemo/issues"
   },
-  "homepage": "https://github.com/Bigwills27/deximo#readme",
+  "homepage": "https://github.com/Bigwills27/dixemo#readme",
   "dependencies": {
     "playwright": "^1.63.0"
   }
