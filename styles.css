@@ -149,6 +149,37 @@ img {
   gap: 8px
 }
 
+.brand-logo-image {
+  width: 142px;
+  height: auto;
+}
+
+.brand-mark-image {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+.brand-logo-image.is-on-dark,
+.brand-mark-image.is-on-dark {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .site-header .brand-logo-image,
+:root[data-theme="dark"] .site-header .brand-mark-image {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 720px) {
+  .brand-logo-image {
+    display: none;
+  }
+
+  .brand-mark-image {
+    display: block;
+  }
+}
+
 .brand-mark {
   background: var(--primary);
   color: var(--on-primary);

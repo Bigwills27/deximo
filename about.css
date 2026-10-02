@@ -125,22 +125,35 @@
              color: var(--text-main);
          }
 
-         .brand-logo .logo-v {
-             font-size: 30px;
-             font-weight: 900;
-             background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-             -webkit-background-clip: text;
-             -webkit-text-fill-color: transparent;
-             line-height: 1;
-             display: inline-block;
-             transform: skew(-8deg);
+         .brand-logo-image {
+             width: 142px;
+             height: auto;
          }
 
-         .brand-logo .logo-text {
-             letter-spacing: 1.5px;
-             font-size: 21px;
-             font-weight: 800;
-             color: var(--text-main);
+         .brand-mark-image {
+             display: none;
+             width: 32px;
+             height: 32px;
+         }
+
+         .brand-logo-image.is-on-dark,
+         .brand-mark-image.is-on-dark {
+             filter: brightness(0) invert(1);
+         }
+
+         :root[data-theme="dark"] .site-header .brand-logo-image,
+         :root[data-theme="dark"] .site-header .brand-mark-image {
+             filter: brightness(0) invert(1);
+         }
+
+         @media (max-width: 720px) {
+             .brand-logo-image {
+                 display: none;
+             }
+
+             .brand-mark-image {
+                 display: block;
+             }
          }
 
          /* Nav links */
