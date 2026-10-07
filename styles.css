@@ -99,13 +99,13 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   overflow-x: hidden;
   transition: background .3s ease, color .3s ease;
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 a {
@@ -140,7 +140,7 @@ img {
 }
 
 .brand {
-  font-family: "Poppins", sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: 23px;
   font-weight: 800;
   letter-spacing: -1.4px;
@@ -282,7 +282,7 @@ img {
   gap: 15px;
   border-radius: 8px;
   padding: 14px 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   transition: transform .2s, background .2s
 }
@@ -308,8 +308,13 @@ img {
 h1,
 h2,
 h3 {
+<<<<<<< Updated upstream
   font-family: "Poppins", sans-serif;
   font-weight: 600
+=======
+  font-family: Manrope, sans-serif;
+  font-weight: 800
+>>>>>>> Stashed changes
 }
 
 h1,
@@ -496,7 +501,7 @@ h2 span {
 }
 
 .hero h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: clamp(48px, 5.6vw, 78px);
   letter-spacing: -3px;
   line-height: 1.02;
@@ -949,7 +954,7 @@ h2 span {
 }
 
 .testimonial blockquote {
-  font-family: "Poppins", sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: clamp(26px, 3vw, 42px);
   letter-spacing: -1.5px;
   line-height: 1.25;
@@ -1072,7 +1077,7 @@ h2 span {
 }
 
 .blog-card h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: Manrope, sans-serif;
   letter-spacing: -.7px;
   font-size: 20px;
   line-height: 1.25;

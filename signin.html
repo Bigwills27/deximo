@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet">
   <script>
     document.documentElement.classList.add('js');
@@ -50,7 +50,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-family: Poppins, sans-serif;
+      font-family: Manrope, sans-serif;
       font-size: 21px;
       font-weight: 800;
       letter-spacing: -1.2px;
@@ -59,7 +59,7 @@
     }
 
     .auth-form-heading {
-      font-family: Poppins, sans-serif;
+      font-family: Manrope, sans-serif;
       font-size: clamp(26px, 3vw, 34px);
       font-weight: 800;
       letter-spacing: -1.8px;
@@ -101,7 +101,7 @@
       border-radius: 10px;
       background: var(--surface);
       color: var(--text);
-      font-family: Poppins, sans-serif;
+      font-family: "DM Sans", system-ui, sans-serif;
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
@@ -173,7 +173,7 @@
       border-radius: 10px;
       background: var(--surface);
       color: var(--text);
-      font-family: Poppins, sans-serif;
+      font-family: "DM Sans", system-ui, sans-serif;
       font-size: 14px;
       padding: 0 14px 0 42px;
       transition: border-color .2s, box-shadow .2s;
@@ -257,7 +257,7 @@
       color: var(--on-primary);
       border: 0;
       border-radius: 10px;
-      font-family: Poppins, sans-serif;
+      font-family: "DM Sans", system-ui, sans-serif;
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
@@ -325,6 +325,7 @@
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="index.html#features">Features</a>
         <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
         <a href="index.html#blog">Blog</a>
       </nav>
       <div class="nav-actions">
@@ -349,6 +350,7 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <a href="index.html#features">Features</a>
       <a href="about.html">About us</a>
+      <a href="contact.html">Contact</a>
       <a href="index.html#blog">Blog</a>
       <a class="mobile-nav-cta" href="signup.html">Create account <span aria-hidden="true">↗</span></a>
     </nav>
@@ -366,7 +368,7 @@
           <h1 class="auth-form-heading">Welcome back</h1>
           <p class="auth-form-sub">Don't have an account? <a href="signup.html">Sign up for free</a></p>
 
-          <!-- <div class="auth-social" role="group" aria-label="Sign in with a social account">
+          <div class="auth-social" role="group" aria-label="Sign in with a social account">
             <button class="auth-social-btn" type="button" id="google-signin">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
                 <path
@@ -393,7 +395,7 @@
             </button>
           </div>
 
-          <div class="auth-divider" role="separator">or continue with email</div> -->
+          <div class="auth-divider" role="separator">or continue with email</div>
 
           <form id="signin-form" novalidate>
             <div class="auth-field">
@@ -457,7 +459,8 @@
         <img class="brand-mark-image is-on-dark" src="images/dixemo-logo.svg" alt="">
       </a>
       <p>Simple tools for better financial decisions.</p>
-      <a class="button button-primary" href="index.html">Back to home <span aria-hidden="true">&#8599;</span></a>
+      <a class="button button-primary" href="index.html">Back to home <span
+          aria-hidden="true">&#8599;</span></a>
     </div>
     <div class="container footer-bottom">
       <span>&copy; 2024 Dixemo. All rights reserved.</span>

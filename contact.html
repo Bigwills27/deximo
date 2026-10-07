@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Contact Deximo – Get in touch with our customer support, enterprise sales, or technical team. We're here to assist you with your financial management needs.">
+    <title>Contact Us — Deximo Financial Platform</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Base Stylesheet & Contact Stylesheet -->
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <script>
+        document.documentElement.classList.add('js');
+        document.documentElement.dataset.theme = localStorage.getItem('deximo-theme') || localStorage.getItem('voxpor-theme') || 'dark';
+    </script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+       SITE HEADER (DEXIMO NAVIGATION)
+       ========================================================= -->
+    <header class="site-header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="brand-logo" aria-label="Deximo home">
+                <span class="logo-v">d</span>
+                <span class="logo-text">deximo</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li class="dropdown">
+                    <span class="nav-link dropdown-btn">Pages <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="index.html#steps">4 Steps</a></li>
+                        <li><a href="index.html#tracking">Expenses</a></li>
+                        <li><a href="about.html#faq">FAQs</a></li>
+                        <li><a href="index.html#download">Download App</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right Action Items -->
+            <div class="nav-right">
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search..." aria-label="Search site">
+                </div>
+
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <a href="signup.html" class="btn-app">Get Started</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+        <a href="index.html#features" class="mobile-nav-link">Features</a>
+        <a href="contact.html" class="mobile-nav-link active">Contact</a>
+        <a href="about.html#team" class="mobile-nav-link">Team</a>
+        <a href="about.html#faq" class="mobile-nav-link">FAQ</a>
+        <a href="signin.html" class="btn-app" style="margin-top: 15px; text-align: center;">Sign in</a>
+        <a href="signup.html" class="btn-app" style="margin-top: 15px; text-align: center;">Get Started</a>
+    </div>
+
+    <main id="top">
+        <!-- =========================================================
+         HERO SECTION: CONTACT US
+         ========================================================= -->
+        <section class="contact-hero">
+            <div class="hero-ambient-glow glow-1"></div>
+            <div class="hero-ambient-glow glow-2"></div>
+            <div class="container hero-content-wrap">
+                <div class="contact-hero-badge anim-hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    We're Here For You
+                </div>
+                <h1 class="contact-hero-title anim-hero-title">Let’s Start a <span
+                        class="shimmer-text">Conversation</span></h1>
+                <p class="contact-hero-subtitle anim-hero-sub">
+                    Have questions about Deximo, need dedicated enterprise assistance, or want to explore partnership
+                    opportunities? We'd love to hear from you.
+                </p>
+                <div class="contact-breadcrumb anim-hero-crumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep">&gt;</span>
+                    <span class="curr">Contact Us</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+         QUICK CONTACT CHANNELS
+         ========================================================= -->
+        <section class="contact-cards-section">
+            <div class="container">
+                <div class="contact-cards-grid">
+
+                    <!-- Channel 1: Live Chat -->
+                    <div class="channel-card reveal-card" style="--card-delay: 0.1s;">
+                        <div class="channel-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="channel-title">Live Chat</h3>
+                        <p class="channel-desc">Chat directly with our support specialists for real-time answers.</p>
+                        <a href="#contactFormCard" class="channel-action" id="openChatTrigger">
+                            Start a chat
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <div class="channel-badge-status">
+                            <span class="pulse-dot"></span> Online (&lt; 2 min wait)
+                        </div>
+                    </div>
+
+                    <!-- Channel 2: Direct Phone -->
+                    <div class="channel-card reveal-card" style="--card-delay: 0.2s;">
+                        <div class="channel-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="channel-title">Call Us</h3>
+                        <p class="channel-desc">Toll-free customer & enterprise sales support lines worldwide.</p>
+                        <a href="tel:+18004567890" class="channel-action">
+                            +1 (800) 456-7890
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <span style="font-size: 12px; color: var(--text-faint); margin-top: 6px;">Mon-Fri 8am - 8pm
+                            EST</span>
+                    </div>
+
+                    <!-- Channel 3: Email Us -->
+                    <div class="channel-card reveal-card" style="--card-delay: 0.3s;">
+                        <div class="channel-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="channel-title">Email Inquiries</h3>
+                        <p class="channel-desc">Drop us an email and our team will get back to you within 4 hours.
+                        </p>
+                        <a href="mailto:hello@dixemo.com" class="channel-action" id="copyEmailBtn"
+                            title="Click to copy email">
+                            <span>hello@dixemo.com</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </a>
+                        <span style="font-size: 12px; color: var(--text-faint); margin-top: 6px;">Average reply: 4
+                            hours</span>
+                    </div>
+
+                    <!-- Channel 4: Visit Office -->
+                    <div class="channel-card reveal-card" style="--card-delay: 0.4s;">
+                        <div class="channel-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="channel-title">Global HQ</h3>
+                        <p class="channel-desc">1200 Financial Center Blvd, 4th Floor, New York, NY 10001.</p>
+                        <a href="#mapWidget" class="channel-action">
+                            View on map
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <span style="font-size: 12px; color: var(--text-faint); margin-top: 6px;">Open for
+                            appointments</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+         MAIN CONTACT SECTION (FORM + SIDEBAR HUBS)
+         ========================================================= -->
+        <section class="contact-main-section">
+            <div class="container">
+                <div class="contact-layout-grid">
+
+                    <!-- ================= LEFT: CONTACT FORM ================= -->
+                    <div class="contact-form-card" id="contactFormCard">
+
+                        <!-- Normal Form State -->
+                        <div id="formContentArea">
+                            <div class="form-header">
+                                <h2 class="form-title">Send Us a Message</h2>
+                                <p class="form-desc">Fill in the form below and one of our dedicated financial
+                                    specialists will be in touch shortly.</p>
+                            </div>
+
+                            <form id="deximoContactForm" novalidate>
+
+                                <!-- Inquiry Topic Selector -->
+                                <div class="topic-selection">
+                                    <label class="topic-label">What is this regarding?</label>
+                                    <div class="topic-pills">
+                                        <label class="topic-pill">
+                                            <input type="radio" name="topic" value="general" checked>
+                                            <span class="topic-pill-box">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                                General Inquiry
+                                            </span>
+                                        </label>
+                                        <label class="topic-pill">
+                                            <input type="radio" name="topic" value="sales">
+                                            <span class="topic-pill-box">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                                </svg>
+                                                Sales & Enterprise
+                                            </span>
+                                        </label>
+                                        <label class="topic-pill">
+                                            <input type="radio" name="topic" value="support">
+                                            <span class="topic-pill-box">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path
+                                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                                    </path>
+                                                </svg>
+                                                Tech Support
+                                            </span>
+                                        </label>
+                                        <label class="topic-pill">
+                                            <input type="radio" name="topic" value="billing">
+                                            <span class="topic-pill-box">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                                </svg>
+                                                Billing & Plans
+                                            </span>
+                                        </label>
+                                        <label class="topic-pill">
+                                            <input type="radio" name="topic" value="partnership">
+                                            <span class="topic-pill-box">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                </svg>
+                                                Partnership
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Name & Email Row -->
+                                <div class="form-row">
+                                    <div class="form-group" id="group-name">
+                                        <label class="form-label" for="contactName">Full Name <span
+                                                class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <svg class="field-icon" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                            <input type="text" id="contactName" name="name" class="form-input"
+                                                placeholder="e.g. Alexander Vance" required>
+                                        </div>
+                                        <span class="field-error-msg">Please provide your full name.</span>
+                                    </div>
+
+                                    <div class="form-group" id="group-email">
+                                        <label class="form-label" for="contactEmail">Work Email <span
+                                                class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <svg class="field-icon" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                            </svg>
+                                            <input type="email" id="contactEmail" name="email" class="form-input"
+                                                placeholder="alexander@company.com" required>
+                                        </div>
+                                        <span class="field-error-msg">Please enter a valid work email address.</span>
+                                    </div>
+                                </div>
+
+                                <!-- Phone & Company Row -->
+                                <div class="form-row">
+                                    <div class="form-group" id="group-phone">
+                                        <label class="form-label" for="contactPhone">Phone Number</label>
+                                        <div class="input-icon-wrap">
+                                            <svg class="field-icon" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path
+                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                </path>
+                                            </svg>
+                                            <input type="tel" id="contactPhone" name="phone" class="form-input"
+                                                placeholder="+1 (555) 000-0000">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" id="group-company">
+                                        <label class="form-label" for="contactCompany">Company / Organization</label>
+                                        <div class="input-icon-wrap">
+                                            <svg class="field-icon" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                            </svg>
+                                            <input type="text" id="contactCompany" name="company" class="form-input"
+                                                placeholder="e.g. Acme Corp">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Subject Line -->
+                                <div class="form-group" id="group-subject">
+                                    <label class="form-label" for="contactSubject">Subject <span
+                                            class="req">*</span></label>
+                                    <div class="input-icon-wrap">
+                                        <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                                        </svg>
+                                        <input type="text" id="contactSubject" name="subject" class="form-input"
+                                            placeholder="How can we assist you today?" required>
+                                    </div>
+                                    <span class="field-error-msg">Please provide a subject line.</span>
+                                </div>
+
+                                <!-- Message Textarea with Character Counter -->
+                                <div class="form-group" id="group-message">
+                                    <div class="form-label">
+                                        <span>Message <span class="req">*</span></span>
+                                        <span class="char-count" id="charCount">0 / 1000</span>
+                                    </div>
+                                    <textarea id="contactMessage" name="message" class="form-textarea"
+                                        placeholder="Describe your project, question, or issue in detail..."
+                                        maxlength="1000" required></textarea>
+                                    <span class="field-error-msg">Please write your message before submitting.</span>
+                                </div>
+
+                                <!-- Drag & Drop File Upload Area -->
+                                <div class="file-upload-zone" id="fileDropZone">
+                                    <input type="file" id="fileAttachment" name="attachment"
+                                        accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.zip">
+                                    <div class="file-upload-content">
+                                        <svg class="file-upload-icon" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="17 8 12 3 7 8"></polyline>
+                                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                                        </svg>
+                                        <div class="file-upload-title">Attach documents or screenshots (optional)</div>
+                                        <div class="file-upload-hint">Drag & drop files here, or <span
+                                                style="color: var(--accent-primary); text-decoration: underline;">browse</span>
+                                            (PDF, PNG, JPG up to 10MB)</div>
+                                    </div>
+                                    <div class="file-preview-list" id="filePreviewList">
+                                        <div class="file-preview-item">
+                                            <span id="fileNameDisplay">document.pdf</span>
+                                            <button type="button" class="file-remove-btn" id="removeFileBtn"
+                                                title="Remove file">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox Agreement -->
+                                <label class="checkbox-group" id="group-agree">
+                                    <input type="checkbox" id="contactAgree" name="agree" required>
+                                    <span class="checkbox-text">
+                                        I agree to the Deximo <a href="index.html#terms">Privacy Policy</a> and
+                                        authorize Deximo to contact me regarding this request.
+                                    </span>
+                                </label>
+                                <span class="field-error-msg" id="agreeErrorMsg"
+                                    style="margin-top: -18px; margin-bottom: 20px;">You must agree before
+                                    submitting.</span>
+
+                                <!-- Submit Button -->
+                                <div class="submit-btn-wrap">
+                                    <button type="submit" class="contact-submit-btn" id="contactSubmitBtn">
+                                        <span class="btn-spinner"></span>
+                                        <span class="btn-text">Send Message</span>
+                                        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Success Confirmation State (Appears on submit) -->
+                        <div class="form-success-card" id="formSuccessCard">
+                            <div class="success-icon-circle">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="success-title">Message Received!</h3>
+                            <p class="success-desc">
+                                Thank you for contacting Deximo, <span id="successUserName"
+                                    style="font-weight: 600; color: var(--text-main);"></span>. Our financial advisory
+                                team will review your inquiry and get back to you at <span id="successUserEmail"
+                                    style="font-weight: 600; color: var(--accent-primary);"></span> within 4 business
+                                hours.
+                            </p>
+                            <div class="success-ticket-box">
+                                Support Ticket: <strong id="successTicketNum">DEX-89241</strong>
+                            </div>
+                            <div>
+                                <button type="button" class="success-reset-btn" id="sendAnotherBtn">
+                                    Send Another Inquiry
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= RIGHT: SIDEBAR HUBS & WIDGETS ================= -->
+                    <div class="contact-sidebar">
+
+                        <!-- Widget 1: System Status -->
+                        <div class="sidebar-widget">
+                            <div class="status-widget-header">
+                                <span style="font-size: 14px; font-weight: 700; color: var(--text-main);">Platform
+                                    Status</span>
+                                <div class="status-indicator-badge">
+                                    <span class="pulse"></span> All Systems Operational
+                                </div>
+                            </div>
+                            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5;">
+                                Deximo Core Banking, API Endpoints, and Payment Gateways are fully functional.
+                            </p>
+                            <div class="status-metrics">
+                                <div class="status-metric-item">
+                                    System Uptime
+                                    <strong>99.99%</strong>
+                                </div>
+                                <div class="status-metric-item">
+                                    Avg API Response
+                                    <strong>42ms</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Widget 2: Global Offices with Live Clocks -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                Global Offices & Local Time
+                            </h3>
+                            <div class="office-list">
+
+                                <!-- Office 1: New York -->
+                                <div class="office-item">
+                                    <div class="office-info">
+                                        <span class="office-flag" title="United States">🇺🇸</span>
+                                        <div>
+                                            <div class="office-name">New York (HQ)</div>
+                                            <div class="office-address">1200 Financial Blvd</div>
+                                        </div>
+                                    </div>
+                                    <div class="office-clock">
+                                        <div class="office-time" id="clockNY">--:--:--</div>
+                                        <span class="office-status-pill open" id="statusNY">Open</span>
+                                    </div>
+                                </div>
+
+                                <!-- Office 2: London -->
+                                <div class="office-item">
+                                    <div class="office-info">
+                                        <span class="office-flag" title="United Kingdom">🇬🇧</span>
+                                        <div>
+                                            <div class="office-name">London (EMEA)</div>
+                                            <div class="office-address">25 Bank St, Canary Wharf</div>
+                                        </div>
+                                    </div>
+                                    <div class="office-clock">
+                                        <div class="office-time" id="clockLondon">--:--:--</div>
+                                        <span class="office-status-pill open" id="statusLondon">Open</span>
+                                    </div>
+                                </div>
+
+                                <!-- Office 3: Singapore -->
+                                <div class="office-item">
+                                    <div class="office-info">
+                                        <span class="office-flag" title="Singapore">🇸🇬</span>
+                                        <div>
+                                            <div class="office-name">Singapore (APAC)</div>
+                                            <div class="office-address">1 Marina Bay Financial Ctr</div>
+                                        </div>
+                                    </div>
+                                    <div class="office-clock">
+                                        <div class="office-time" id="clockSG">--:--:--</div>
+                                        <span class="office-status-pill open" id="statusSG">Open</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Widget 3: Book a Product Demo Callout -->
+                        <div class="sidebar-widget demo-widget">
+                            <div
+                                style="font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--accent-primary); letter-spacing: 0.8px; margin-bottom: 6px;">
+                                Personalized Walkthrough
+                            </div>
+                            <h3 style="font-size: 19px; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">
+                                Book a 1-on-1 Product Demo
+                            </h3>
+                            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55;">
+                                Discover how Deximo automates bookkeeping, tracks expenses, and delivers real-time
+                                financial reporting for your team.
+                            </p>
+                            <a href="signup.html" class="demo-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Schedule a 20-Min Call
+                            </a>
+                        </div>
+
+                        <!-- Widget 4: Interactive HQ Map Card -->
+                        <div class="sidebar-widget" id="mapWidget">
+                            <h3 class="widget-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                                </svg>
+                                Headquarters Location
+                            </h3>
+                            <div class="map-widget-preview">
+                                <!-- Dark futuristic stylized vector map grid -->
+                                <svg class="map-svg-grid" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+                                    <pattern id="mapPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#536dfe" stroke-width="0.8" />
+                                    </pattern>
+                                    <rect width="100%" height="100%" fill="url(#mapPattern)" />
+                                    <!-- City roads vector lines -->
+                                    <path d="M 0 60 Q 150 70 400 30" fill="none" stroke="#3b82f6" stroke-width="2.5"
+                                        opacity="0.6" />
+                                    <path d="M 0 130 Q 220 110 400 150" fill="none" stroke="#3b82f6" stroke-width="2.5"
+                                        opacity="0.6" />
+                                    <path d="M 170 0 L 190 180" fill="none" stroke="#00f2fe" stroke-width="3"
+                                        opacity="0.7" />
+                                    <path d="M 290 0 L 260 180" fill="none" stroke="#3b82f6" stroke-width="1.8"
+                                        opacity="0.5" />
+                                </svg>
+                                <!-- Interactive Map Pin -->
+                                <div class="map-pin" title="Deximo HQ New York">
+                                    <div class="map-pin-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="map-pin-pulse"></div>
+                                    <div class="map-pin-label">Deximo HQ • NY</div>
+                                </div>
+                            </div>
+                            <div class="map-actions">
+                                <span>1200 Financial Blvd, New York, NY</span>
+                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Get
+                                    Directions &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- =========================================================
+       "TALK TO US TODAY" CONTACT STRIP (FROM DIXEMO BANNER)
+       ========================================================= -->
+    <section class="footer-talk-strip" aria-label="Quick Contact Strip">
+        <div class="container">
+            <div class="talk-strip-content">
+                <div class="talk-left">
+                    <span class="talk-headline">Talk to us today:</span>
+                    <div class="talk-contact-links">
+                        <a href="mailto:hello@dixemo.com" class="talk-link-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            hello@dixemo.com
+                        </a>
+                        <a href="https://www.dixemo.com" target="_blank" rel="noopener" class="talk-link-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                            www.dixemo.com
+                        </a>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+                    <div class="talk-dev-box">
+                        <span class="dev-tag-icon">&lt;/&gt;</span>
+                        <div class="dev-text-group">
+                            <span class="dev-title">Developer Friendly</span>
+                            <span class="dev-sub">Simple API • Quick integration • Powerful outcomes</span>
+                        </div>
+                    </div>
+                    <a href="#contactFormCard" class="talk-btn-green">
+                        Contact Our Team
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       SITE FOOTER (VOXPOR DESIGN)
+       ========================================================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Col 1: Brand & Bio -->
+                <div class="footer-col-brand">
+                    <a href="index.html" class="brand-logo" aria-label="Voxpor home">
+                        <span class="logo-v">D</span>
+                        <span class="logo-text">Deximo</span>
+                    </a>
+                    <p class="footer-desc">
+                        Lorem ipsum dolor sit amet Quis sits ullam cLorem ipsum doloramet Quis sits t Lorem ipsum dolor
+                        sit amet Lorem ipsum dolor sit Lorem ipsum dolor
+                    </p>
+                </div>
+
+                <!-- Col 2: Newsletter Signup -->
+                <div class="footer-col-newsletter">
+                    <h4 class="footer-heading">Newsletter Signup</h4>
+                    <form class="footer-newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for subscribing to Voxpor!');">
+                        <input type="email" class="footer-newsletter-input" placeholder="Enter your email" required
+                            aria-label="Email address">
+                        <button type="submit" class="footer-newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Col 3: Contact Us -->
+                <div class="footer-col-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="footer-contact-list">
+                        <!-- Phone -->
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-info">
+                                <strong>Phone</strong>
+                                <a href="tel:+1234567890">+1 234 567 890</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-info">
+                                <strong>Email</strong>
+                                <a href="mailto:zBx6y@example.com">zBx6y@example.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2025 Deximo By Evonicmedia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+       INTERACTIVE JAVASCRIPT
+       ========================================================= -->
+    <script>
+        // 1. Theme Toggle
+        const root = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = root.dataset.theme === 'dark';
+            const newTheme = isDark ? 'light' : 'dark';
+            root.dataset.theme = newTheme;
+            localStorage.setItem('deximo-theme', newTheme);
+            localStorage.setItem('voxpor-theme', newTheme);
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('open');
+            });
+
+            mobileDrawer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('open');
+                });
+            });
+        }
+
+        // 3. Live World Office Clocks
+        function updateOfficeClocks() {
+            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+            // New York (America/New_York)
+            try {
+                const nyTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/New_York' }).format(new Date());
+                const clockNY = document.getElementById('clockNY');
+                if (clockNY) clockNY.textContent = nyTime;
+            } catch (e) { }
+
+            // London (Europe/London)
+            try {
+                const londonTime = new Intl.DateTimeFormat('en-GB', { ...options, timeZone: 'Europe/London' }).format(new Date());
+                const clockLondon = document.getElementById('clockLondon');
+                if (clockLondon) clockLondon.textContent = londonTime;
+            } catch (e) { }
+
+            // Singapore (Asia/Singapore)
+            try {
+                const sgTime = new Intl.DateTimeFormat('en-SG', { ...options, timeZone: 'Asia/Singapore' }).format(new Date());
+                const clockSG = document.getElementById('clockSG');
+                if (clockSG) clockSG.textContent = sgTime;
+            } catch (e) { }
+        }
+        updateOfficeClocks();
+        setInterval(updateOfficeClocks, 1000);
+
+        // 4. Character Counter on Message Textarea
+        const contactMessage = document.getElementById('contactMessage');
+        const charCount = document.getElementById('charCount');
+        if (contactMessage && charCount) {
+            contactMessage.addEventListener('input', () => {
+                charCount.textContent = `${contactMessage.value.length} / 1000`;
+            });
+        }
+
+        // 5. File Upload Drag & Drop and Preview Handler
+        const fileDropZone = document.getElementById('fileDropZone');
+        const fileInput = document.getElementById('fileAttachment');
+        const filePreviewList = document.getElementById('filePreviewList');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+        const removeFileBtn = document.getElementById('removeFileBtn');
+
+        if (fileDropZone && fileInput) {
+            ['dragenter', 'dragover'].forEach(eventName => {
+                fileDropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    fileDropZone.classList.add('dragover');
+                });
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                fileDropZone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    fileDropZone.classList.remove('dragover');
+                });
+            });
+
+            fileDropZone.addEventListener('drop', (e) => {
+                if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                    fileInput.files = e.dataTransfer.files;
+                    handleFileSelect(e.dataTransfer.files[0]);
+                }
+            });
+
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files && fileInput.files.length > 0) {
+                    handleFileSelect(fileInput.files[0]);
+                }
+            });
+
+            function handleFileSelect(file) {
+                if (file) {
+                    fileNameDisplay.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+                    filePreviewList.style.display = 'block';
+                }
+            }
+
+            if (removeFileBtn) {
+                removeFileBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    fileInput.value = '';
+                    filePreviewList.style.display = 'none';
+                });
+            }
+        }
+
+        // 6. Copy Email Quick Trigger
+        const copyEmailBtn = document.getElementById('copyEmailBtn');
+        if (copyEmailBtn) {
+            copyEmailBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                navigator.clipboard.writeText('hello@dixemo.com').then(() => {
+                    const span = copyEmailBtn.querySelector('span');
+                    const origText = span.textContent;
+                    span.textContent = 'Copied to clipboard!';
+                    setTimeout(() => {
+                        span.textContent = origText;
+                    }, 2000);
+                });
+            });
+        }
+
+        // 7. Form Submission & Client Validation
+        const contactForm = document.getElementById('deximoContactForm');
+        const submitBtn = document.getElementById('contactSubmitBtn');
+        const formContentArea = document.getElementById('formContentArea');
+        const formSuccessCard = document.getElementById('formSuccessCard');
+        const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let hasError = false;
+
+                // Validate Name
+                const nameInput = document.getElementById('contactName');
+                const groupName = document.getElementById('group-name');
+                if (!nameInput.value.trim()) {
+                    groupName.classList.add('has-error');
+                    hasError = true;
+                } else {
+                    groupName.classList.remove('has-error');
+                }
+
+                // Validate Email
+                const emailInput = document.getElementById('contactEmail');
+                const groupEmail = document.getElementById('group-email');
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
+                    groupEmail.classList.add('has-error');
+                    hasError = true;
+                } else {
+                    groupEmail.classList.remove('has-error');
+                }
+
+                // Validate Subject
+                const subjectInput = document.getElementById('contactSubject');
+                const groupSubject = document.getElementById('group-subject');
+                if (!subjectInput.value.trim()) {
+                    groupSubject.classList.add('has-error');
+                    hasError = true;
+                } else {
+                    groupSubject.classList.remove('has-error');
+                }
+
+                // Validate Message
+                const messageInput = document.getElementById('contactMessage');
+                const groupMessage = document.getElementById('group-message');
+                if (!messageInput.value.trim()) {
+                    groupMessage.classList.add('has-error');
+                    hasError = true;
+                } else {
+                    groupMessage.classList.remove('has-error');
+                }
+
+                // Validate Agreement Checkbox
+                const agreeCheck = document.getElementById('contactAgree');
+                const agreeErrorMsg = document.getElementById('agreeErrorMsg');
+                if (!agreeCheck.checked) {
+                    agreeErrorMsg.style.display = 'block';
+                    hasError = true;
+                } else {
+                    agreeErrorMsg.style.display = 'none';
+                }
+
+                if (hasError) {
+                    // Scroll to first error
+                    const firstError = document.querySelector('.has-error, #agreeErrorMsg[style*="block"]');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                // Start loading animation
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+
+                // Simulate network dispatch
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+
+                    // Populate success card
+                    const userName = document.getElementById('successUserName');
+                    const userEmail = document.getElementById('successUserEmail');
+                    const ticketNum = document.getElementById('successTicketNum');
+
+                    userName.textContent = nameInput.value.trim();
+                    userEmail.textContent = emailInput.value.trim();
+                    ticketNum.textContent = 'DEX-' + Math.floor(10000 + Math.random() * 90000);
+
+                    // Show success card
+                    formContentArea.style.display = 'none';
+                    formSuccessCard.style.display = 'block';
+                    contactForm.reset();
+                    if (filePreviewList) filePreviewList.style.display = 'none';
+                    if (charCount) charCount.textContent = '0 / 1000';
+                }, 1200);
+            });
+
+            if (sendAnotherBtn) {
+                sendAnotherBtn.addEventListener('click', () => {
+                    formSuccessCard.style.display = 'none';
+                    formContentArea.style.display = 'block';
+                });
+            }
+        }
+
+        // 8. FAQ Accordion Toggle
+        const faqCards = document.querySelectorAll('.contact-faq-card');
+        faqCards.forEach(card => {
+            const btn = card.querySelector('.faq-header-btn');
+            if (!btn) return;
+            btn.addEventListener('click', () => {
+                const isActive = card.classList.contains('active');
+                faqCards.forEach(other => {
+                    other.classList.remove('active');
+                    const otherBtn = other.querySelector('.faq-header-btn');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                });
+                if (!isActive) {
+                    card.classList.add('active');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
